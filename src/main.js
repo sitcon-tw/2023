@@ -114,7 +114,10 @@ export const createApp = ViteSSG(
         const pinia = createPinia()
 
         app.use(pinia)
-        app.use(vuetify);
+        app.use(vuetify, {
+            vueRouterIntegration: true,
+            vueRouterBase: '/2023/'
+        });
         if (
             import.meta.env.SSR)
             initialState.pinia = pinia.state.value

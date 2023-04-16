@@ -5,7 +5,8 @@ import vuetify from '@vuetify/vite-plugin'
 import Components from 'unplugin-vue-components/vite'
 // https://vitejs.dev/config/
 export default defineConfig({
-    base: '/2023/',
+    // base: '/2023/',
+    base: './',
     plugins: [
         vue(),
         vuetify({
@@ -22,7 +23,8 @@ export default defineConfig({
         alias: {
             '@': fileURLToPath(new URL('./src',
                 import.meta.url))
-        }
+        },
+        extensions: ['.mjs', '.js', '.ts', '.jsx', '.tsx', '.json', '.css'],
     },
     ssgOptions: {
         dirStyle: 'nested',
