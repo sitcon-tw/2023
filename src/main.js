@@ -3,13 +3,15 @@ import { createPinia } from 'pinia'
 import { useDialogStore } from './store/dialog'
 import '@mdi/font/css/materialdesignicons.css';
 // Vuetify
-import vuetify from '@/plugins/vuetify'
+import { createVuetify } from 'vuetify'
+import 'vuetify/dist/vuetify.min.css'
 
 import App from './App.vue'
 import cfpLayout from '@/layout/cfp.vue'
 import notFoundLayout from '@/layout/not-found.vue'
 import 'vue3-openlayers/dist/vue3-openlayers.css'
 import IndexView from '@/pages/index2023.vue';
+const vuetify = createVuetify()
 export const createApp = ViteSSG(
     App, {
         base: '/2023/',
