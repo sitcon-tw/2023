@@ -1,21 +1,13 @@
 import { ViteSSG } from 'vite-ssg'
 import { createPinia } from 'pinia'
 import { useDialogStore } from './store/dialog'
-import { loadFonts } from './plugins/webfontloader';
 import '@mdi/font/css/materialdesignicons.css';
 // Vuetify
-import 'vuetify/styles'
-import { createVuetify } from 'vuetify';
-import * as components from 'vuetify/components';
-import * as directives from 'vuetify/directives';
-import AOS from 'aos';
-import 'aos/dist/aos.css';
+import vuetify from '@/plugins/vuetify'
 
 import App from './App.vue'
-import defaultLayout from '@/layout/default.vue'
 import cfpLayout from '@/layout/cfp.vue'
 import notFoundLayout from '@/layout/not-found.vue'
-import sessionData from '@/assets/session.json';
 import 'vue3-openlayers/dist/vue3-openlayers.css'
 import IndexView from '@/pages/index2023.vue';
 export const createApp = ViteSSG(
@@ -118,14 +110,9 @@ export const createApp = ViteSSG(
     },
     async({ app, router, routes, isClient, initialState }) => {
         const pinia = createPinia()
-        const vuetify = createVuetify({
-            components,
-            directives,
-        })
+
         app.use(pinia)
         app.use(vuetify);
-        app.use(loadFonts);
-        app.use(AOS.init());
         if (
             import.meta.env.SSR)
             initialState.pinia = pinia.state.value
