@@ -32,7 +32,8 @@
           <v-row class="text-center">
             <v-col cols="12">
               <v-img
-                  :src="'/2023/imgs/logo.png'"
+                  :src="'/imgs/logo.png'"
+                  alt="logo"
                   class="my-3 fade-in"
                   contain
                   height="200"
