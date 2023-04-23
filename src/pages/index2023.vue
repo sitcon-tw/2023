@@ -11,8 +11,8 @@
           ></v-img>
         </template>
         <v-app-bar-title href="#indexContainer">Student Community Battle 學生社群大亂鬥</v-app-bar-title>
-        <v-spacer></v-spacer>
-        <div class="buttonGroup">
+<!--        <v-spacer></v-spacer>-->
+        <div class="buttonGroup d-none d-md-block">
           <v-btn href="#introContainer">
             關於我們
           </v-btn>
@@ -65,14 +65,14 @@
             >
               參與活動
             </v-btn>
-            <v-btn
-                style="color: #d2e3d6"
-                href="https://groups.google.com/g/coscup-2023-stu"
-                rounded="pill"
-                color="#3A7B1B"
-            >
-              加入我們
-            </v-btn>
+<!--            <v-btn-->
+<!--                style="color: #d2e3d6"-->
+<!--                href="https://groups.google.com/g/coscup-2023-stu"-->
+<!--                rounded="pill"-->
+<!--                color="#3A7B1B"-->
+<!--            >-->
+<!--              加入我們-->
+<!--            </v-btn>-->
             <v-btn
                 style="color: #d2e3d6"
                 href="#promoteContainer"
