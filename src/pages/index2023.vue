@@ -29,7 +29,8 @@
       <v-main>
         <v-container fluid id="indexContainer">
           <v-row class="text-center">
-            <v-col cols="12">
+            <v-col cols="3"></v-col>
+            <v-col cols="9">
               <v-img
                   :src="'/imgs/coscup-stu-logo.png'"
                   alt="logo"
@@ -37,7 +38,7 @@
                   contain
               />
             </v-col>
-
+            <v-col cols="0"></v-col>
 <!--            <v-col class="mb-4">-->
 <!--              <h1  class="fade-in display-2 font-weight-bold mb-3">-->
 <!--                學生計算機年會 SITCON-->
@@ -125,7 +126,7 @@
         <!--入場方式-->
         <v-container fluid id="eventContainer">
           <v-row >
-            <v-col cols="6" xs="12" sm="12" md="6" lg="6" xl="6" xxl="6">
+            <v-col cols="12" xs="12" sm="12" md="6" lg="6" xl="6" xxl="6">
               <h1>入場方式</h1>
               <div class="mapText">
                 <h4>今年 COSCUP 2023 在國立臺灣科技大學舉辦，無須進行報名，到現場即可直接參與！ </h4>
@@ -149,7 +150,7 @@
                 </ul>
               </div>
             </v-col>
-            <v-col cols="6" xs="12" sm="12" md="6" lg="6" xl=6 xxl="6" data-aos="flip-down">
+            <v-col cols="12" xs="12" sm="12" md="6" lg="6" xl=6 xxl="6" data-aos="flip-down">
               <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14455.616113270356!2d121.538498!3d25.013694!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x9e4a4e741c4d6156!2z6ZuE6I-v5Y-w5Y2B5L2N5bGx6Lev5Y2A5aSp!5e0!3m2!1szh-TW!2stw!4v1617914503814!5m2!1szh-TW!2stw" width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
             </v-col>
           </v-row>
@@ -181,7 +182,8 @@
           </div>
 
           <div class="pt-0">
-            學生計算機年會 Students' Information Technology Conference <br><br>
+            學生計算機年會 Students' Information Technology Conference <br>
+            Google 學生開發者社團 Google Developer Student Clubs Taiwan & Hong Kong <br>
             合作聯繫 <a href="mailto://contact@sitcon.org">contact@sitcon.org</a> <br>
             <!--票務問題 <a href="mailto://ticket@sitcon.org">ticket@sitcon.org</a>-->
           </div>
@@ -189,7 +191,7 @@
           <v-divider></v-divider>
 
           <div>
-            {{ new Date().getFullYear() }} — <strong>SITCON</strong>
+            {{ new Date().getFullYear() }} — <strong>SITCON X GDSC</strong>
           </div>
         </v-footer>
       </v-main>
