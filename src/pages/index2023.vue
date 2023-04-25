@@ -393,7 +393,7 @@ export default {
 /* container */
 
 #indexContainer {
-  background: url('/imgs/2023/bg.svg') no-repeat;
+  background: url(/imgs/2023/bg.svg) no-repeat;
   background-color: #333333;
   height: 100vh;
   background-size: cover;
