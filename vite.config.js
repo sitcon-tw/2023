@@ -6,7 +6,7 @@ import Components from 'unplugin-vue-components/vite'
 // https://vitejs.dev/config/
 export default defineConfig({
     // base: '/2023/',
-    base: './',
+    base: '/',
     plugins: [
         vue(),
         vuetify({
