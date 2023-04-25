@@ -4,7 +4,7 @@
     <div class="navbar-item"><a href="#introContainer" class="btn navbarbtnred">關於我們</a></div>
     <div class="navbar-item"><a href="#promoteContainer" class="btn navbarbtnblue">稿件招募</a></div>
     <div class="logo">
-      <a href="#indexContainer"><img src="/imgs/2023/SITCON&GDSC_logo.svg" alt /></a>
+      <a href="#indexContainer"><img src="'/imgs/2023/SITCON&GDSC_logo.svg'" alt /></a>
     </div>
     <div class="navbar-item"><a href="#admittanceContainer" class="btn navbarbtngreen">入場方式</a></div>
     <div class="navbar-item"><a href="#footerContainer" class="btn navbarbtnyellow">聯絡我們</a></div>
