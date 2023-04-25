@@ -14,7 +14,7 @@
       <div id="first-section">
         <div class="fade-in">
           <div class="mainlogo">
-            <img :src="'imgs/2023/SITCON&GDSC_logo_BIG.svg'" alt />
+            <img :src="'/imgs/2023/SITCON&GDSC_logo_BIG.svg'" alt />
           </div>
           <div class="fade-in" id="first-section-title">學生社群大亂鬥</div>
           <div class="datefont">2023 07/29~07/30 國立臺灣科技大學</div>
@@ -22,7 +22,7 @@
       </div>
       <div class="mb-5">
         <div class="downicon">
-          <a href="#introContainer"><img :src="'imgs/2023/downicon.svg'" alt /></a>
+          <a href="#introContainer"><img :src="'/imgs/2023/downicon.svg'" alt /></a>
         </div>
       </div>
     </div>
