@@ -1,6 +1,6 @@
 <template>
-  <div class="navbarsection">
-    
+  <div class="navbarsection" id="navbar">
+
     <div class="navbar-item"><a href="#introContainer" class="btn navbarbtnred">關於我們</a></div>
     <div class="navbar-item"><a href="#promoteContainer" class="btn navbarbtnblue">稿件招募</a></div>
     <div class="logo">
@@ -43,10 +43,9 @@
         <div>
           <div class="introsectioncontect">
             <div class="introsectioncontecttext">
-              學生計算機年會（Students’ Information Technology Conference）自 2013
-              年發起，以學生為本、由學生自發舉辦，長期投身學生資訊教育與推廣開源精神，希望引領更多學子踏入資訊的殿堂，更冀望所有對資訊有興趣的學生，能夠在年會裏齊聚一堂，彼此激盪、傳承、啟發，達到「學以致用、教學相長」的實際展現。
-              <br>
-              <br>在 SITCON 的第 X 週年，期望我們秉持初衷——讓學生們分享與交流知識，把各地學生串連起來的 X 字路口——也期望每人皆能在與大家的聊天與討論之中，找到自己的方向、熱情。
+              <p>學生社群大亂鬥是由 SITCON 學生計算機年會與 Google Developer Student Clubs Taiwan & Hong Kong (GDSC) 組成的學生社群議程軌。</p>
+              <p>作為學生展現自己的舞台，我們期待以學生為主體的稿件，例如：從學生角度出發的經驗分享、技術分享，專題研究成果、獨立研究甘苦談，或探討學生相關議題等等。</p>
+              <p>任何與資訊科技、電腦技術相關的講題，或是與 Google 技術、Google Developers 社群相關的投稿，我們都非常歡迎！</p>
             </div>
             <div class="introsectioncontectimg">
               <img src="/imgs/2023/SITCON&GDSC_logo.svg">
@@ -78,7 +77,9 @@
               不論你是從學生角度出發的經驗分享，還是探討學生相關議題，只要和資訊科技、電腦技術相關，或是社群相關，都歡迎投稿！你可以參考 SITCON 歷年的議程，或是 GDSC
               去年的議程軌內容，發揮你的想像力，創造出屬於你的議程！
               <br><br>
-              投稿截止日期是 5/22，詳細投稿方式和規定請點擊 官網連結 。期待你的投稿！
+              投稿截止日期是 5/22，詳細投稿方式和規定請點擊 <a
+                href="https://pretalx.coscup.org/coscup-2023/cfp?_gl=1*1gtde7e*_ga*MTQwNDQ3MzU1OS4xNjgxMTQ1MDM2*_ga_C9EMTMDSS1*MTY4MTQ0Njg5MC4zLjEuMTY4MTQ0OTU3MS4wLjAuMA..">官網連結</a>
+              。期待你的投稿！
             </div>
             <div class="introsectioncontectimg">
               <img src="/imgs/2023/papers.svg">
@@ -137,17 +138,9 @@
         <div class="footercontect">
           <div class="footersectioncontecttext">
             <span>
-              <a
-                color="white"
-                v-for="icon in iconLinks"
-                :key="icon"
-                :class="icon.icon"
-                :icon="icon.icon"
-                :href="icon.link" 
-                class="btnicon"
-                variant="text"
-            >
-            </a>
+              <a color="white" v-for="icon in iconLinks" :key="icon" :class="icon.icon" :icon="icon.icon"
+                :href="icon.link" class="btnicon" variant="text">
+              </a>
               <span>
                 <p><strong>歷年網站</strong></p>
                 <a color="black" class="btn btnyellow" v-for="(year, index) in years" :key="index"
@@ -202,6 +195,7 @@
 <script>
 import AOS from "aos";
 import "aos/dist/aos.css";
+
 
 export default {
   name: "IndexView",
@@ -285,8 +279,27 @@ export default {
   }),
   mounted() {
     AOS.init();
+    
+    // 取得Navbar元素
+    const navbar = document.getElementById('navbar');
+
+    // 監聽視窗的滾動事件
+    window.addEventListener('scroll', function () {
+      // 取得視窗的滾動位置
+      const scrollTop = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
+
+      // 判斷滾動位置是否超過某個門檻值，例如100px
+      if (scrollTop > 100) {
+        // 若超過門檻值，則加入 scrolled CSS class
+        navbar.classList.add('scrolled');
+      } else {
+        // 否則移除 scrolled CSS class
+        navbar.classList.remove('scrolled');
+      }
+    });
   }
 };
+
 </script>
 <style>
 .fade-in {
@@ -306,8 +319,8 @@ export default {
     opacity: 1;
   }
 }
-/* navbar */
 
+/* navbar */
 .navbarsection {
   position: fixed;
   display: flex;
@@ -317,6 +330,11 @@ export default {
   padding-top: 16px;
   margin-left: 16px;
   z-index: 1;
+  background-color: transparent;
+}
+
+.navbarsection.scrolled {
+  background-color: #333;
 }
 
 .navbar-item {
@@ -399,26 +417,31 @@ export default {
   background-size: cover;
   background-position: center;
 }
+
 #introContainer {
   padding-top: 15vh;
   background-color: #333333;
   height: 100%;
 }
+
 #promoteContainer {
   padding-top: 15vh;
   background-color: #333333;
   height: 100%;
 }
+
 #admittanceContainer {
   padding-top: 15vh;
   background-color: #333333;
   height: 100%;
 }
+
 #footerContainer {
   padding-top: 15vh;
   background-color: #333333;
   height: 100%;
 }
+
 /* btn */
 .btnyellow {
   margin: 1%;
@@ -427,6 +450,7 @@ export default {
   letter-spacing: 4px;
   cursor: pointer;
 }
+
 .btnyellow:hover {
   background-color: #FBBC04;
   box-shadow: 0 0 5px #FBBC04,
@@ -434,6 +458,7 @@ export default {
     0 0 50px #FBBC04,
     0 0 60px #FBBC04;
 }
+
 /* section */
 #first-section {
   padding: 3vw;
@@ -580,6 +605,7 @@ export default {
   font-weight: 900;
   margin: 2vw 0vw 0vw 4vw;
 }
+
 .introsectioncontect {
   display: flex;
   justify-content: space-between;
@@ -621,6 +647,7 @@ export default {
   height: 100%;
   transform: rotate(30deg);
 }
+
 /* flex */
 .fl {
   display: flex;
@@ -636,7 +663,8 @@ export default {
   display: flex;
   justify-content: center;
 }
-.btnicon{
+
+.btnicon {
   border-radius: 0.5rem;
   color: #ffffff;
   text-decoration: none;
@@ -645,9 +673,11 @@ export default {
   font-size: 1.2vw;
   transition: 0.3s;
 }
-.btnicon:hover{
+
+.btnicon:hover {
   background-color: rgba(105, 105, 105, 0.3);
 }
+
 @keyframes jump {
   0% {
     transform: translate(0%, 0%);
@@ -663,44 +693,55 @@ export default {
 }
 
 @media (max-width: 1262px) {
-  .fl{
+  .fl {
     justify-content: center;
   }
-  .fr{
+
+  .fr {
     justify-content: center;
   }
-  #introsection,#promotesection {
+
+  #introsection,
+  #promotesection {
     width: 90%;
     border-radius: 15px;
   }
 }
+
 @media (max-width: 992px) {
-  
+
   #first-section {
     padding: 5vw;
   }
+
   .sword {
     width: 7vw;
     height: 7vw;
   }
-  #first-section-title{
+
+  #first-section-title {
     font-size: 9vw;
   }
-  .datefont{
+
+  .datefont {
     font-size: 3.5vw;
   }
-  .fl{
+
+  .fl {
     justify-content: center;
   }
-  .fr{
+
+  .fr {
     justify-content: center;
   }
+
   .introsectiontitlecontect {
     max-width: 100%;
     font-size: 40px;
   }
 
-  #introsection,#promotesection {
+  #introsection,
+  #promotesection {
     width: 90%;
     border-radius: 15px;
   }
@@ -715,6 +756,7 @@ export default {
     width: 90%;
     margin: 0;
   }
+
   .introsectioncontectimg {
     justify-content: center;
     margin-right: 0;
@@ -725,13 +767,18 @@ export default {
     align-items: center;
   }
 
-  .introsectiontitle-bgred,.introsectiontitle-bgblue,.introsectiontitle-bggreen,.introsectiontitle-bgyellow {
+  .introsectiontitle-bgred,
+  .introsectiontitle-bgblue,
+  .introsectiontitle-bggreen,
+  .introsectiontitle-bgyellow {
     display: none;
   }
-  .footersectioncontecttext{
+
+  .footersectioncontecttext {
     width: 100%;
   }
-  .btnicon{
+
+  .btnicon {
     font-size: 3vw;
   }
 }
@@ -740,6 +787,7 @@ export default {
   #first-section {
     padding: 15vw;
   }
+
   .sword {
     width: 10vw;
     height: 10vw;
@@ -752,6 +800,5 @@ export default {
   .introsectioncontecttext {
     padding: 30% 5% 5% 5%;
   }
-}
-</style>
+}</style>
 
