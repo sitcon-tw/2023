@@ -24,12 +24,12 @@ jobs:
       run: yarn install
 
     - name: Generate Pages
-      run: yarn build:netlify
+      run: yarn build
 
 
     - name: Deploy to GitHub Pages
       uses: peaceiris/actions-gh-pages@v3
       with:
         github_token: ${{ secrets.ACCESS_TOEKN }}
-        publish_dir: dist_netlify
+        publish_dir: dist
         force_orphan: true
