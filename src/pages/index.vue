@@ -4,7 +4,7 @@
     <div class="navbar-item"><a href="#introContainer" class="btn navbarbtnred">關於我們</a></div>
     <div class="navbar-item"><a href="#promoteContainer" class="btn navbarbtnblue">稿件招募</a></div>
     <div class="logo">
-      <a href="#indexContainer"><img src="2023/imgs/2023/SITCON&GDSC_logo.svg" alt /></a>
+      <a href="#indexContainer"><img src="/2023/imgs/2023/SITCON&GDSC_logo.svg" alt /></a>
     </div>
     <div class="navbar-item"><a href="#admittanceContainer" class="btn navbarbtngreen">入場方式</a></div>
     <div class="navbar-item"><a href="#footerContainer" class="btn navbarbtnyellow">聯絡我們</a></div>
@@ -14,7 +14,7 @@
       <div id="first-section">
         <div class="fade-in">
           <div class="mainlogo">
-            <img src="2023/imgs/2023/SITCON&GDSC_logo_BIG.svg" alt />
+            <img src="/2023/imgs/2023/SITCON&GDSC_logo_BIG.svg" alt />
           </div>
           <div class="fade-in" id="first-section-title">學生社群大亂鬥</div>
           <div class="datefont">2023 07/29~07/30 國立臺灣科技大學</div>
@@ -22,7 +22,7 @@
       </div>
       <div class="mb-5">
         <div class="downicon">
-          <a href="#introContainer"><img src="2023/imgs/2023/downicon.svg" alt /></a>
+          <a href="#introContainer"><img src="/2023/imgs/2023/downicon.svg" alt /></a>
         </div>
       </div>
     </div>
@@ -33,7 +33,7 @@
       <div id="introsection" class="sectionbox">
         <div class="introsectiontitle">
           <div class="sword">
-            <img src="2023/imgs/2023/sword.svg" alt />
+            <img src="/2023/imgs/2023/sword.svg" alt />
           </div>
           <div class="introsectiontitlecontect">
             學生社群大亂鬥 Student Adventure Time
@@ -48,7 +48,7 @@
               <p>任何與資訊科技、電腦技術相關的講題，或是與 Google 技術、Google Developers 社群相關的投稿，我們都非常歡迎！</p>
             </div>
             <div class="introsectioncontectimg">
-              <img src="2023/imgs/2023/SITCON&GDSC_logo.svg">
+              <img src="/2023/imgs/2023/SITCON&GDSC_logo.svg">
             </div>
           </div>
         </div>
@@ -61,7 +61,7 @@
       <div id="promotesection" class="sectionbox">
         <div class="introsectiontitle">
           <div class="sword">
-            <img src="2023/imgs/2023/sword.svg" alt />
+            <img src="/2023/imgs/2023/sword.svg" alt />
           </div>
           <div class="introsectiontitlecontect">
             稿件招募 Call For Proposals
@@ -82,7 +82,7 @@
               。期待你的投稿！
             </div>
             <div class="introsectioncontectimg">
-              <img src="2023/imgs/2023/papers.svg">
+              <img src="/2023/imgs/2023/papers.svg">
             </div>
           </div>
         </div>
@@ -95,7 +95,7 @@
       <div id="admittancesection" class="sectionboxcenter">
         <div class="introsectiontitle">
           <div class="sword">
-            <img src="2023/imgs/2023/sword.svg" alt />
+            <img src="/2023/imgs/2023/sword.svg" alt />
           </div>
           <div class="introsectiontitlecontect">
             入場方式 Admittance method
@@ -384,7 +384,7 @@ head{
 /* container */
 
 #indexContainer {
-  background: url(2023/imgs/2023/bg.svg) no-repeat;
+  background: url(/2023/imgs/2023/bg.svg) no-repeat;
   background-color: #333333;
   height: 100vh;
   background-size: cover;
@@ -516,7 +516,7 @@ head{
   opacity: 0.7;
   width: 100%;
   height: 2vw;
-  background: url(2023/imgs/2023/titlebggreen.svg) no-repeat;
+  background: url(/2023/imgs/2023/titlebggreen.svg) no-repeat;
   background-size: cover;
   background-position: center;
   bottom: 20%;
@@ -529,7 +529,7 @@ head{
   opacity: 0.7;
   width: 100%;
   height: 2vw;
-  background: url(2023/imgs/2023/titlebgyellow.svg) no-repeat;
+  background: url(/2023/imgs/2023/titlebgyellow.svg) no-repeat;
   background-size: cover;
   background-position: center;
   bottom: 20%;
@@ -542,7 +542,7 @@ head{
   opacity: 0.7;
   width: 100%;
   height: 2vw;
-  background: url(2023/imgs/2023/titlebgblue.svg) no-repeat;
+  background: url(/2023/imgs/2023/titlebgblue.svg) no-repeat;
   background-size: cover;
   background-position: center;
   bottom: 20%;
@@ -555,7 +555,7 @@ head{
   opacity: 0.7;
   width: 100%;
   height: 2vw;
-  background: url(2023/imgs/2023/titlebgred.svg) no-repeat;
+  background: url(/2023/imgs/2023/titlebgred.svg) no-repeat;
   background-size: cover;
   background-position: center;
   bottom: 20%;
