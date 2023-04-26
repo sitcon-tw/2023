@@ -1,24 +1,8 @@
 <template>
   <Navbar />
 
-  <section id="index-container">
-    <div class="text-center">
-      <div id="first-section">
-        <div class="fade-in">
-          <div class="mainlogo">
-            <img :src="'/2023/imgs/2023/sitcon-gdsc-logo-big.svg'" alt />
-          </div>
-          <div class="fade-in" id="first-section-title">學生社群大亂鬥</div>
-          <div class="datefont">2023 07/29~07/30 國立臺灣科技大學</div>
-        </div>
-      </div>
-      <div class="mb-5">
-        <div class="downicon">
-          <a href="#introContainer"><img :src="'/2023/imgs/2023/downicon.svg'" alt /></a>
-        </div>
-      </div>
-    </div>
-  </section>
+  <!-- Leading -->
+  <SectionLeading />
 
   <!--社群介紹-->
   <PagePart name="intro">
@@ -319,15 +303,6 @@ export default {
   to {
     opacity: 1;
   }
-}
-
-/* container */
-#index-container {
-  background: url('/2023/imgs/2023/bg.svg') no-repeat;
-  background-color: var(--background-color);
-  height: 100vh;
-  background-size: cover;
-  background-position: center;
 }
 
 /* btn */

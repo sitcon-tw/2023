@@ -9,6 +9,8 @@ declare module '@vue/runtime-core' {
     PagePart: typeof import('./src/components/page-part.vue')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
+    SectionIntro: typeof import('./src/components/section/intro.vue')['default']
+    SectionLeading: typeof import('./src/components/section/leading.vue')['default']
   }
 }
 
