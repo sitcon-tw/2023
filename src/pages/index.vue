@@ -1,14 +1,5 @@
 <template>
-  <div class="navbarsection">
-
-    <div class="navbar-item"><a href="#introContainer" class="btn navbarbtnred">關於我們</a></div>
-    <div class="navbar-item"><a href="#promoteContainer" class="btn navbarbtnblue">稿件招募</a></div>
-    <div class="logo">
-      <a href="#indexContainer"><img :src="'/2023/imgs/2023/SITCON&GDSC_logo.svg'" alt /></a>
-    </div>
-    <div class="navbar-item"><a href="#admittanceContainer" class="btn navbarbtngreen">入場方式</a></div>
-    <div class="navbar-item"><a href="#footerContainer" class="btn navbarbtnyellow">聯絡我們</a></div>
-  </div>
+  <Navbar />
   <div class="container-fluid" id="indexContainer">
     <div class="text-center">
       <div id="first-section">
@@ -203,89 +194,92 @@
 import AOS from "aos";
 import "aos/dist/aos.css";
 
+import Navbar from "../components/navbar.vue";
+
 export default {
-  name: "IndexView",
-  data: () => ({
-    ecosystem: [
-      {
-        text: "vuetify-loader",
-        href: "https://github.com/vuetifyjs/vuetify-loader/tree/next"
-      },
-      {
-        text: "github",
-        href: "https://github.com/vuetifyjs/vuetify/tree/next"
-      },
-      {
-        text: "awesome-vuetify",
-        href: "https://github.com/vuetifyjs/awesome-vuetify"
-      }
-    ],
-    importantLinks: [
-      {
-        text: "Frontend GitHub",
-        href: "https://github.com/fan9704/MQTT-Frontend"
-      },
-      {
-        text: "Backend GitHub",
-        href: "https://github.com/fan9704/PetMonitoringSystem-Backend"
-      },
-      {
-        text: "Application GitHub",
-        href: "https://github.com/fan9704/PetMonitoringSystem-Application"
-      },
-      {
-        text: "Hardware GitHub",
-        href: "https://github.com/fan9704/PetMonitoringSystem-Hardware"
-      }
-    ],
-    whatsNext: [
-      {
-        text: "註冊",
-        href: "https://vuetifyjs.com"
-      },
-      {
-        text: "登入",
-        href: "https://vuetifyjs.com/introduction/roadmap/"
-      }
-    ],
-    icons: ["bi-facebook", "bi-instagram", "bi-twitter", "bi-linkedin"],
-    iconLinks: [
-      {
-        name: "Facebook",
-        link: "https://www.facebook.com/SITCONtw/",
-        icon: "bi-facebook"
-      },
-      {
-        name: "Instagram",
-        link: "https://www.instagram.com/sitcon.tw/",
-        icon: "bi-instagram"
-      },
-      {
-        name: "Telegram",
-        link: "https://sitcon.org/tg",
-        icon: "bi-telegram"
-      },
-      {
-        name: "Twitter",
-        link: "https://sitcon.org/twitter",
-        icon: "bi-twitter"
-      },
-      {
-        name: "Youtube",
-        link: "https://sitcon.org/yt",
-        icon: "bi-youtube"
-      },
-      {
-        name: "Medium",
-        link: "https://sitcon.org/medium",
-        icon: "bi-mastodon"
-      }
-    ],
-    years: [2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022]
-  }),
-  mounted() {
-    AOS.init();
-  }
+    name: "IndexView",
+    data: () => ({
+        ecosystem: [
+            {
+                text: "vuetify-loader",
+                href: "https://github.com/vuetifyjs/vuetify-loader/tree/next"
+            },
+            {
+                text: "github",
+                href: "https://github.com/vuetifyjs/vuetify/tree/next"
+            },
+            {
+                text: "awesome-vuetify",
+                href: "https://github.com/vuetifyjs/awesome-vuetify"
+            }
+        ],
+        importantLinks: [
+            {
+                text: "Frontend GitHub",
+                href: "https://github.com/fan9704/MQTT-Frontend"
+            },
+            {
+                text: "Backend GitHub",
+                href: "https://github.com/fan9704/PetMonitoringSystem-Backend"
+            },
+            {
+                text: "Application GitHub",
+                href: "https://github.com/fan9704/PetMonitoringSystem-Application"
+            },
+            {
+                text: "Hardware GitHub",
+                href: "https://github.com/fan9704/PetMonitoringSystem-Hardware"
+            }
+        ],
+        whatsNext: [
+            {
+                text: "註冊",
+                href: "https://vuetifyjs.com"
+            },
+            {
+                text: "登入",
+                href: "https://vuetifyjs.com/introduction/roadmap/"
+            }
+        ],
+        icons: ["bi-facebook", "bi-instagram", "bi-twitter", "bi-linkedin"],
+        iconLinks: [
+            {
+                name: "Facebook",
+                link: "https://www.facebook.com/SITCONtw/",
+                icon: "bi-facebook"
+            },
+            {
+                name: "Instagram",
+                link: "https://www.instagram.com/sitcon.tw/",
+                icon: "bi-instagram"
+            },
+            {
+                name: "Telegram",
+                link: "https://sitcon.org/tg",
+                icon: "bi-telegram"
+            },
+            {
+                name: "Twitter",
+                link: "https://sitcon.org/twitter",
+                icon: "bi-twitter"
+            },
+            {
+                name: "Youtube",
+                link: "https://sitcon.org/yt",
+                icon: "bi-youtube"
+            },
+            {
+                name: "Medium",
+                link: "https://sitcon.org/medium",
+                icon: "bi-mastodon"
+            }
+        ],
+        years: [2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022]
+    }),
+    mounted() {
+        AOS.init();
+    },
+    components: { Navbar }
 };
 </script>
 <style>
@@ -316,90 +310,6 @@ export default {
     opacity: 1;
   }
 }
-/* navbar */
-
-.navbarsection {
-  position: fixed;
-  display: flex;
-  width: 100%;
-  justify-content: center;
-  align-items: center;
-  padding-top: 16px;
-  margin-left: 16px;
-  z-index: 1;
-}
-
-.navbar-item {
-  margin: 0 2.5% 0 2.5%;
-  cursor: pointer;
-  color: var(--text-color);
-}
-
-.logo {
-  margin: 0 2.5% 0 2.5%;
-  cursor: pointer;
-}
-
-.navbarbtnred {
-  color: var(--red);
-  transition: 0.5s;
-  letter-spacing: 4px;
-  cursor: pointer;
-}
-
-.navbarbtnred:hover {
-  background-color: var(--red);
-  box-shadow: 0 0 5px var(--red),
-    0 0 25px var(--red),
-    0 0 50px var(--red),
-    0 0 60px var(--red);
-}
-
-.navbarbtnblue {
-  color: var(--blue);
-  transition: 0.5s;
-  letter-spacing: 4px;
-  cursor: pointer;
-}
-
-.navbarbtnblue:hover {
-  background-color: var(--blue);
-  box-shadow: 0 0 5px var(--blue),
-    0 0 25px var(--blue),
-    0 0 50px var(--blue),
-    0 0 60px var(--blue);
-}
-
-.navbarbtngreen {
-  color: var(--green);
-  transition: 0.5s;
-  letter-spacing: 4px;
-  cursor: pointer;
-}
-
-.navbarbtngreen:hover {
-  background-color: var(--green);
-  box-shadow: 0 0 5px var(--green),
-    0 0 25px var(--green),
-    0 0 50px var(--green),
-    0 0 60px var(--green);
-}
-
-.navbarbtnyellow {
-  color: var(--yellow);
-  transition: 0.5s;
-  letter-spacing: 4px;
-  cursor: pointer;
-}
-
-.navbarbtnyellow:hover {
-  background-color: var(--yellow);
-  box-shadow: 0 0 5px var(--yellow),
-    0 0 25px var(--yellow),
-    0 0 50px var(--yellow),
-    0 0 60px var(--yellow);
-}
-
 /* container */
 
 #indexContainer {
