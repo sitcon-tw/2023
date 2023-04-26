@@ -1,6 +1,7 @@
 <template>
   <Navbar />
-  <div class="container-fluid" id="indexContainer">
+
+  <section id="index-container">
     <div class="text-center">
       <div id="first-section">
         <div class="fade-in">
@@ -17,9 +18,10 @@
         </div>
       </div>
     </div>
-  </div>
+  </section>
+
   <!--社群介紹-->
-  <div class="container-fluid" id="introContainer">
+  <PagePart name="intro">
     <div data-aos="fade-right" class="fr">
       <div id="introsection" class="sectionbox">
         <div class="introsectiontitle">
@@ -46,9 +48,10 @@
         </div>
       </div>
     </div>
-  </div>
+  </PagePart>
+
   <!-- 稿件招募 -->
-  <div class="container-fluid" id="promoteContainer">
+  <PagePart name="promote">
     <div data-aos="fade-left" class="fl">
       <div id="promotesection" class="sectionbox">
         <div class="introsectiontitle">
@@ -78,9 +81,10 @@
         </div>
       </div>
     </div>
-  </div>
+  </PagePart>
+
   <!-- 入場方式-->
-  <div class="container-fluid" id="admittanceContainer">
+  <PagePart name="admittance">
     <div data-aos="fade-right" class="fc">
       <div id="admittancesection" class="sectionboxcenter">
         <div class="introsectiontitle">
@@ -120,9 +124,10 @@
         </div>
       </div>
     </div>
-  </div>
+  </PagePart>
+
   <!-- footer -->
-  <div class="container-fluid" id="footerContainer">
+  <PagePart name="footer">
     <div data-aos="fade-left" class="fc">
       <div id="footersection" class="sectionboxcenter">
         <div class="footercontect">
@@ -157,7 +162,8 @@
         </div>
       </div>
     </div>
-  </div>
+  </PagePart>
+
   <!--
   <div class="container-fluid" id="footerContainer">
     <div data-aos="fade-left" class="fc">
@@ -195,6 +201,7 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 
 import Navbar from "../components/navbar.vue";
+import PagePart from "../components/page-part.vue";
 
 export default {
     name: "IndexView",
@@ -279,7 +286,10 @@ export default {
     mounted() {
         AOS.init();
     },
-    components: { Navbar }
+    components: {
+        Navbar,
+        PagePart,
+    },
 };
 </script>
 <style>
@@ -310,35 +320,16 @@ export default {
     opacity: 1;
   }
 }
-/* container */
 
-#indexContainer {
+/* container */
+#index-container {
   background: url('/2023/imgs/2023/bg.svg') no-repeat;
   background-color: var(--background-color);
   height: 100vh;
   background-size: cover;
   background-position: center;
 }
-#introContainer {
-  padding-top: 15vh;
-  background-color: var(--background-color);
-  height: 100%;
-}
-#promoteContainer {
-  padding-top: 15vh;
-  background-color: var(--background-color);
-  height: 100%;
-}
-#admittanceContainer {
-  padding-top: 15vh;
-  background-color: var(--background-color);
-  height: 100%;
-}
-#footerContainer {
-  padding-top: 15vh;
-  background-color: var(--background-color);
-  height: 100%;
-}
+
 /* btn */
 .btnyellow {
   margin: 1%;
