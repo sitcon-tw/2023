@@ -5,12 +5,7 @@ import vue from '@vitejs/plugin-vue'
 import Components from 'unplugin-vue-components/vite'
 // https://vitejs.dev/config/
 export default defineConfig({
-<<<<<<< HEAD
-    // base: '/2023/',
-    base: '/',
-=======
     base: '/2023/',
->>>>>>> d6dfff1b13c4a7337d7365a210e30495073dd9cb
     plugins: [
         vue(),
         // vuetify({

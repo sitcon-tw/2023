@@ -20,16 +20,8 @@
         "@vitejs/plugin-vue": "^2.3.3",
         "@vueuse/head": "^1.1.26",
         "unplugin-vue-components": "^0.19.5",
-<<<<<<< HEAD
-        "vite": "^2.9.5",
-        "vite-ssg": "^0.20.0"
-    },
-    "engines": {
-        "node": ">= 16.0.0"
-=======
         "vite": "^2.9.13",
         "vite-ssg": "^0.22.2",
         "vue-router": "^4.1.6"
->>>>>>> d6dfff1b13c4a7337d7365a210e30495073dd9cb
     }
 }
