@@ -289,7 +289,7 @@ export default {
       const scrollTop = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
 
       // 判斷滾動位置是否超過某個門檻值，例如100px
-      if (scrollTop > 100) {
+      if (scrollTop > 50) {
         // 若超過門檻值，則加入 scrolled CSS class
         navbar.classList.add('scrolled');
       } else {
@@ -327,8 +327,7 @@ export default {
   width: 100%;
   justify-content: center;
   align-items: center;
-  padding-top: 16px;
-  margin-left: 16px;
+  padding: 16px 0 0 16px;
   z-index: 1;
   background-color: transparent;
 }
