@@ -1,6 +1,6 @@
 <template>
   <div class="navbarsection">
-    
+
     <div class="navbar-item"><a href="#introContainer" class="btn navbarbtnred">關於我們</a></div>
     <div class="navbar-item"><a href="#promoteContainer" class="btn navbarbtnblue">稿件招募</a></div>
     <div class="logo">
@@ -143,7 +143,7 @@
                 :key="icon"
                 :class="icon.icon"
                 :icon="icon.icon"
-                :href="icon.link" 
+                :href="icon.link"
                 class="btnicon"
                 variant="text"
             >
@@ -167,7 +167,7 @@
       </div>
     </div>
   </div>
-  <!--   
+  <!--
   <div class="container-fluid" id="footerContainer">
     <div data-aos="fade-left" class="fc">
         <div id="footersection" class="sectionbox">
@@ -289,6 +289,16 @@ export default {
 };
 </script>
 <style>
+:root {
+  --text-color: #ffffff;
+  --background-color: #333333;
+
+  --red: #ea4335;
+  --blue: #4285F4;
+  --green: #77B55A;
+  --yellow: #FBBC04;
+}
+
 .fade-in {
   opacity: 0;
   animation-name: fade-in;
@@ -322,7 +332,7 @@ export default {
 .navbar-item {
   margin: 0 2.5% 0 2.5%;
   cursor: pointer;
-  color: #ffffff;
+  color: var(--text-color);
 }
 
 .logo {
@@ -331,108 +341,108 @@ export default {
 }
 
 .navbarbtnred {
-  color: #ea4335;
+  color: var(--red);
   transition: 0.5s;
   letter-spacing: 4px;
   cursor: pointer;
 }
 
 .navbarbtnred:hover {
-  background-color: #ea4335;
-  box-shadow: 0 0 5px #ea4335,
-    0 0 25px #ea4335,
-    0 0 50px #ea4335,
-    0 0 60px #ea4335;
+  background-color: var(--red);
+  box-shadow: 0 0 5px var(--red),
+    0 0 25px var(--red),
+    0 0 50px var(--red),
+    0 0 60px var(--red);
 }
 
 .navbarbtnblue {
-  color: #4285F4;
+  color: var(--blue);
   transition: 0.5s;
   letter-spacing: 4px;
   cursor: pointer;
 }
 
 .navbarbtnblue:hover {
-  background-color: #4285F4;
-  box-shadow: 0 0 5px #4285F4,
-    0 0 25px #4285F4,
-    0 0 50px #4285F4,
-    0 0 60px #4285F4;
+  background-color: var(--blue);
+  box-shadow: 0 0 5px var(--blue),
+    0 0 25px var(--blue),
+    0 0 50px var(--blue),
+    0 0 60px var(--blue);
 }
 
 .navbarbtngreen {
-  color: #77B55A;
+  color: var(--green);
   transition: 0.5s;
   letter-spacing: 4px;
   cursor: pointer;
 }
 
 .navbarbtngreen:hover {
-  background-color: #77B55A;
-  box-shadow: 0 0 5px #77B55A,
-    0 0 25px #77B55A,
-    0 0 50px #77B55A,
-    0 0 60px #77B55A;
+  background-color: var(--green);
+  box-shadow: 0 0 5px var(--green),
+    0 0 25px var(--green),
+    0 0 50px var(--green),
+    0 0 60px var(--green);
 }
 
 .navbarbtnyellow {
-  color: #FBBC04;
+  color: var(--yellow);
   transition: 0.5s;
   letter-spacing: 4px;
   cursor: pointer;
 }
 
 .navbarbtnyellow:hover {
-  background-color: #FBBC04;
-  box-shadow: 0 0 5px #FBBC04,
-    0 0 25px #FBBC04,
-    0 0 50px #FBBC04,
-    0 0 60px #FBBC04;
+  background-color: var(--yellow);
+  box-shadow: 0 0 5px var(--yellow),
+    0 0 25px var(--yellow),
+    0 0 50px var(--yellow),
+    0 0 60px var(--yellow);
 }
 
 /* container */
 
 #indexContainer {
   background: url('/2023/imgs/2023/bg.svg') no-repeat;
-  background-color: #333333;
+  background-color: var(--background-color);
   height: 100vh;
   background-size: cover;
   background-position: center;
 }
 #introContainer {
   padding-top: 15vh;
-  background-color: #333333;
+  background-color: var(--background-color);
   height: 100%;
 }
 #promoteContainer {
   padding-top: 15vh;
-  background-color: #333333;
+  background-color: var(--background-color);
   height: 100%;
 }
 #admittanceContainer {
   padding-top: 15vh;
-  background-color: #333333;
+  background-color: var(--background-color);
   height: 100%;
 }
 #footerContainer {
   padding-top: 15vh;
-  background-color: #333333;
+  background-color: var(--background-color);
   height: 100%;
 }
 /* btn */
 .btnyellow {
   margin: 1%;
-  color: #FBBC04;
+  color: var(--yellow);
   transition: 0.5s;
   letter-spacing: 4px;
   cursor: pointer;
 }
 .btnyellow:hover {
-  background-color: #FBBC04;
-  box-shadow: 0 0 5px #FBBC04,
-    0 0 25px #FBBC04,
-    0 0 50px #FBBC04,
-    0 0 60px #FBBC04;
+  background-color: var(--yellow);
+  box-shadow: 0 0 5px var(--yellow),
+    0 0 25px var(--yellow),
+    0 0 50px var(--yellow),
+    0 0 60px var(--yellow);
 }
 /* section */
 #first-section {
@@ -449,7 +459,7 @@ export default {
 }
 
 #first-section-title {
-  color: #ffffff;
+  color: var(--text-color);
   font-size: 6.7vw;
 }
 
@@ -469,32 +479,32 @@ export default {
 .sectionbox {
   box-sizing: border-box;
   width: 75%;
-  border: 5px solid #ffffff;
+  border: 5px solid var(--text-color);
 }
 
 .sectionboxcenter {
   box-sizing: border-box;
   width: 90%;
-  border: 5px solid #ffffff;
+  border: 5px solid var(--text-color);
 }
 
 #introsection {
-  box-shadow: 0px 0px 15px 5px #ea4335, 0px 0px 15px 5px #ea4335 inset;
+  box-shadow: 0px 0px 15px 5px var(--red), 0px 0px 15px 5px var(--red) inset;
   border-radius: 0px 15px 15px 0px;
 }
 
 #promotesection {
-  box-shadow: 0px 0px 15px 5px #4285F4, 0px 0px 15px 5px #4285F4 inset;
+  box-shadow: 0px 0px 15px 5px var(--blue), 0px 0px 15px 5px var(--blue) inset;
   border-radius: 15px 0px 0px 15px;
 }
 
 #admittancesection {
-  box-shadow: 0px 0px 15px 5px #77B55A, 0px 0px 15px 5px #77B55A inset;
+  box-shadow: 0px 0px 15px 5px var(--green), 0px 0px 15px 5px var(--green) inset;
   border-radius: 15px;
 }
 
 #footersection {
-  box-shadow: 0px 0px 15px 5px #FBBC04, 0px 0px 15px 5px #FBBC04 inset;
+  box-shadow: 0px 0px 15px 5px var(--yellow), 0px 0px 15px 5px var(--yellow) inset;
   border-radius: 15px;
 }
 
@@ -505,7 +515,7 @@ export default {
 }
 
 .introsectiontitlecontect {
-  color: #ffffff;
+  color: var(--text-color);
   font-family: "Open Sans", sans-serif;
   font-weight: 900;
   height: 5vw;
@@ -574,7 +584,7 @@ export default {
 }
 
 .footersectioncontecttext {
-  color: #ffffff;
+  color: var(--text-color);
   font-family: "Open Sans", sans-serif;
   width: 40vw;
   font-weight: 900;
@@ -588,7 +598,7 @@ export default {
 }
 
 .introsectioncontecttext {
-  color: #ffffff;
+  color: var(--text-color);
   font-family: "Open Sans", sans-serif;
   width: 40vw;
   font-weight: 900;
@@ -638,7 +648,7 @@ export default {
 }
 .btnicon{
   border-radius: 0.5rem;
-  color: #ffffff;
+  color: var(--text-color);
   text-decoration: none;
   margin: 5%;
   padding: 5px;
@@ -675,7 +685,7 @@ export default {
   }
 }
 @media (max-width: 992px) {
-  
+
   #first-section {
     padding: 5vw;
   }
