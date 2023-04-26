@@ -1,43 +1,35 @@
 {
     "name": "sitcon-2023",
+    "private": true,
     "version": "0.0.0",
+    "type": "module",
     "scripts": {
         "dev": "vite",
         "build": "vite-ssg build",
-        "build:netlify": "vite-ssg build && mv dist dist_netlify/2022",
-        "preview": "vite preview --port 5050"
+        "preview": "vite preview",
+        "build:netlify": "vite-ssg build && mv dist dist_netlify/2023"
     },
     "dependencies": {
-        "@mdi/font": "^7.1.96",
+        "@mdi/font": "^7.2.96",
         "aos": "^2.3.4",
-        "vuetify": "3.1.10",
-        "webfontloader": "^1.6.28",
-        "@ccip-app/session-table": "^1.1.0",
-        "@vueuse/head": "^0.7.6",
-        "d3": "^7.4.4",
-        "konami-code-js": "^0.8.1",
-        "pinia": "^2.0.14",
-        "sass": "^1.52.1",
-        "showdown": "^2.1.0",
-        "vue": "^3.2.33",
-        "vue-router": "^4.0.14",
-        "vue3-openlayers": "^0.1.68"
+        "sass": "^1.62.1",
+        "vue": "^3.2.47",
+        "webfontloader": "^1.6.28"
     },
-    "browserslist": [
-        "defaults"
-    ],
     "devDependencies": {
-        "@vuetify/vite-plugin": "^1.0.0-alpha.0",
-        "vuetify-loader": "^1.9.2",
-        "vite-plugin-vuetify": "^1.0.2",
-        "@vitejs/plugin-vue": "^2.3.1",
-        "autoprefixer": "^10.4.7",
-        "postcss": "^8.4.14",
+        "@vitejs/plugin-vue": "^2.3.3",
+        "@vueuse/head": "^1.1.26",
         "unplugin-vue-components": "^0.19.5",
+<<<<<<< HEAD
         "vite": "^2.9.5",
         "vite-ssg": "^0.20.0"
     },
     "engines": {
         "node": ">= 16.0.0"
+=======
+        "vite": "^2.9.13",
+        "vite-ssg": "^0.22.2",
+        "vue-router": "^4.1.6"
+>>>>>>> d6dfff1b13c4a7337d7365a210e30495073dd9cb
     }
 }
