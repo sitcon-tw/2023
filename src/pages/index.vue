@@ -4,7 +4,7 @@
       <div class="navbar-item"><a href="#introContainer" class="btn navbarbtnred">關於我們</a></div>
       <div class="navbar-item"><a href="#promoteContainer" class="btn navbarbtnblue">稿件招募</a></div>
       <div class="logo">
-        <a href="#indexContainer"><img :src="'/imgs/2023/SITCON&GDSC_logo.svg'" alt /></a>
+        <a href="#indexContainer"><img :src="'/2023/imgs/2023/SITCON&GDSC_logo.svg'" alt /></a>
       </div>
       <div class="navbar-item"><a href="#admittanceContainer" class="btn navbarbtngreen">入場方式</a></div>
       <div class="navbar-item"><a href="#footerContainer" class="btn navbarbtnyellow">聯絡我們</a></div>
@@ -14,7 +14,7 @@
         <div id="first-section">
           <div class="fade-in">
             <div class="mainlogo">
-              <img :src="'/imgs/2023/SITCON&GDSC_logo_BIG.svg'" alt />
+              <img :src="'/2023/imgs/2023/SITCON&GDSC_logo_BIG.svg'" alt />
             </div>
             <div class="fade-in" id="first-section-title">學生社群大亂鬥</div>
             <div class="datefont">2023 07/29~07/30 國立臺灣科技大學</div>
@@ -22,7 +22,7 @@
         </div>
         <div class="mb-5">
           <div class="downicon">
-            <a href="#introContainer"><img :src="'/imgs/2023/downicon.svg'" alt /></a>
+            <a href="#introContainer"><img :src="'/2023/imgs/2023/downicon.svg'" alt /></a>
           </div>
         </div>
       </div>
@@ -33,7 +33,7 @@
         <div id="introsection" class="sectionbox">
           <div class="introsectiontitle">
             <div class="sword">
-              <img :src="'/imgs/2023/sword.svg'" alt />
+              <img :src="'/2023/imgs/2023/sword.svg'" alt />
             </div>
             <div class="introsectiontitlecontect">
               學生社群大亂鬥 Student Adventure Time
@@ -49,7 +49,7 @@
                 <br>在 SITCON 的第 X 週年，期望我們秉持初衷——讓學生們分享與交流知識，把各地學生串連起來的 X 字路口——也期望每人皆能在與大家的聊天與討論之中，找到自己的方向、熱情。
               </div>
               <div class="introsectioncontectimg">
-                <img :src="'/imgs/2023/SITCON&GDSC_logo.svg'">
+                <img :src="'/2023/imgs/2023/SITCON&GDSC_logo.svg'">
               </div>
             </div>
           </div>
@@ -62,7 +62,7 @@
         <div id="promotesection" class="sectionbox">
           <div class="introsectiontitle">
             <div class="sword">
-              <img :src="'/imgs/2023/sword.svg'" alt />
+              <img :src="'/2023/imgs/2023/sword.svg'" alt />
             </div>
             <div class="introsectiontitlecontect">
               稿件招募 Call For Proposals
@@ -81,7 +81,7 @@
                 投稿截止日期是 5/22，詳細投稿方式和規定請點擊 官網連結 。期待你的投稿！
               </div>
               <div class="introsectioncontectimg">
-                <img :src="'/imgs/2023/papers.svg'">
+                <img :src="'/2023/imgs/2023/papers.svg'">
               </div>
             </div>
           </div>
@@ -94,7 +94,7 @@
         <div id="admittancesection" class="sectionboxcenter">
           <div class="introsectiontitle">
             <div class="sword">
-              <img :src="'/imgs/2023/sword.svg'" alt />
+              <img :src="'/2023/imgs/2023/sword.svg'" alt />
             </div>
             <div class="introsectiontitlecontect">
               入場方式 Admittance method
@@ -393,7 +393,7 @@
   /* container */
   
   #indexContainer {
-    background: url('/imgs/2023/bg.svg') no-repeat;
+    background: url('/2023/imgs/2023/bg.svg') no-repeat;
     background-color: #333333;
     height: 100vh;
     background-size: cover;

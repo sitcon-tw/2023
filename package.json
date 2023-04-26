@@ -5,24 +5,24 @@
     "type": "module",
     "scripts": {
         "dev": "vite",
-        "build": "vite build",
-        "preview": "vite preview"
+        "build": "vite-ssg build",
+        "preview": "vite preview",
+        "build:netlify": "vite-ssg build && mv dist dist_netlify/2023"
     },
     "dependencies": {
         "@mdi/font": "^7.2.96",
+        "@vueuse/head": "^0.7.6",
         "aos": "^2.3.4",
         "sass": "^1.62.1",
         "vue": "^3.2.47",
         "vue-router": "^4.1.6",
-        "vuetify": "^3.1.10",
-        "webfontloader": "^1.6.28",
-        "@vueuse/head": "^0.7.6"
+        "webfontloader": "^1.6.28"
     },
     "devDependencies": {
         "@vitejs/plugin-vue": "^2.3.3",
-        "@vuetify/vite-plugin": "^1.0.0-alpha.0",
+        "unplugin-vue-components": "^0.19.5",
         "vite": "^2.9.13",
-        "vite-plugin-vuetify": "^1.0.2",
-        "vuetify-loader": "^1.9.2"
+        "vite-ssg": "^0.22.2"
+
     }
 }
