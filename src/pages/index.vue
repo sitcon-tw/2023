@@ -6,7 +6,7 @@
       <div id="first-section">
         <div class="fade-in">
           <div class="mainlogo">
-            <img :src="'/2023/imgs/2023/SITCON&GDSC_logo_BIG.svg'" alt />
+            <img :src="'/2023/imgs/2023/sitcon-gdsc-logo-big.svg'" alt />
           </div>
           <div class="fade-in" id="first-section-title">學生社群大亂鬥</div>
           <div class="datefont">2023 07/29~07/30 國立臺灣科技大學</div>
