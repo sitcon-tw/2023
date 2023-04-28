@@ -322,9 +322,6 @@ head{
   cursor: pointer;
   color: #ffffff;
 }
-.navbar-item a{
-  font-size: 1vw;
-}
 .logo {
   margin: 0 2.5% 0 2.5%;
   cursor: pointer;
@@ -779,5 +776,10 @@ head{
   .introsectioncontecttext {
     padding: 30% 5% 5% 5%;
   }
-}</style>
+  .logo {
+    margin: 0;
+  }
+}
+
+</style>
 
