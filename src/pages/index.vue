@@ -272,6 +272,7 @@ export default {
 }
 body{
   overflow-x: hidden;
+  background-color: #333;
 }
 head{
   display: none;
@@ -301,7 +302,6 @@ head{
   width: 100%;
   justify-content: center;
   align-items: center;
-  padding: 16px 0 0 16px;
   z-index: 1;
   background-color: transparent;
 }
@@ -385,7 +385,6 @@ head{
 
 #indexContainer {
   background: url(/2023/imgs/2023/bg.svg) no-repeat;
-  background-color: #333333;
   height: 100vh;
   background-size: cover;
   background-position: center;
@@ -393,19 +392,16 @@ head{
 
 #introContainer {
   padding-top: 15vh;
-  background-color: #333333;
   height: 100%;
 }
 
 #promoteContainer {
   padding-top: 15vh;
-  background-color: #333333;
   height: 100%;
 }
 
 #admittanceContainer {
   padding-top: 15vh;
-  background-color: #333333;
   height: 100%;
 }
 
@@ -444,6 +440,7 @@ head{
 .mainlogo img {
   margin-top: 3%;
   height: 100%;
+  width: 100%;
 }
 
 #first-section-title {
