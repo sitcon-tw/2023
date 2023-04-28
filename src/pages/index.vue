@@ -310,6 +310,7 @@ head{
   justify-content: center;
   align-items: center;
   z-index: 1;
+  gap: 2.5%;
   background-color: transparent;
 }
 
@@ -318,11 +319,12 @@ head{
 }
 
 .navbar-item {
-  margin: 0 2.5% 0 2.5%;
   cursor: pointer;
   color: #ffffff;
 }
-
+.navbar-item a{
+  font-size: 1vw;
+}
 .logo {
   margin: 0 2.5% 0 2.5%;
   cursor: pointer;
