@@ -1,4 +1,5 @@
 <template>
+  <div class="container-fluid" id="indexContainer">
   <div class="navbarsection" id="navbar">
 
     <div class="navbar-item"><a href="#introContainer" class="btn navbarbtnred">關於我們</a></div>
@@ -9,7 +10,6 @@
     <div class="navbar-item"><a href="#admittanceContainer" class="btn navbarbtngreen">入場方式</a></div>
     <div class="navbar-item"><a href="#footerContainer" class="btn navbarbtnyellow">聯絡我們</a></div>
   </div>
-  <div class="container-fluid" id="indexContainer">
     <div class="text-center">
       <div id="first-section">
         <div class="fade-in">
