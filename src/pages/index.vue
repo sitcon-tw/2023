@@ -104,7 +104,8 @@
         <div>
           <div class="introsectioncontect">
             <div class="introsectioncontecttext">
-              <h4><strong>今年 COSCUP 2023 在國立臺灣科技大學舉辦，無須進行報名，到現場即可直接參與！</strong></h4>
+              <h4><strong>今年 COSCUP 2023 在國立臺灣科技大學舉辦，<br>「免費入場」且無須進行報名，到現場即可直接參與！</strong></h4>
+              <br>
               <h5><strong>捷運</strong></h5>
                 <ul>
                   <li>松山新店線（綠線）：由公館站 2 號「銘傳國小」出口左轉，沿台大舟山路步行，於鹿鳴堂右轉，過基隆路後左行即可到達；或於公館站 1 號「水源市場」出口轉乘 1、673、907、綠 11、棕 12 直達。
@@ -147,6 +148,10 @@
               <a color="white" v-for="icon in iconLinks" :key="icon" :class="icon.icon" :icon="icon.icon"
                 :href="icon.link" class="btnicon" variant="text">
               </a>
+            </span>
+            <br>
+            <br>
+            <span>
               <span>
                 <p><strong>歷年網站</strong></p>
                 <a color="black" class="btn btnyellow" v-for="(year, index) in years" :key="index"
@@ -155,9 +160,11 @@
                 </a>
               </span>
             </span>
-            <h5> 學生計算機年會 Students' Information Technology Conference</h5>
             <br>
-            <h5> Google 學生開發者社團 Google Developer Student Clubs Taiwan & Hong Kong</h5>
+            <br>
+            <h5><strong> 學生計算機年會 Students' Information Technology Conference </strong></h5>
+            <br>
+            <h5><strong> Google 學生開發者社團 Google Developer Student Clubs Taiwan & Hong Kong </strong>st></h5>
             <br>
             <p>合作聯繫:<br><a href="mailto://contact@sitcon.org">contact@sitcon.org</a> </p>
             <p>{{ new Date().getFullYear() }} — <strong>SITCON X GDSC</strong></p>
@@ -236,8 +243,8 @@ export default {
         icon: "bi-youtube"
       },
       {
-        name: "Medium",
-        link: "https://sitcon.org/medium",
+        name: "Mastodon",
+        link: "https://g0v.social/@sitcontw",
         icon: "bi-mastodon"
       }
     ],
