@@ -17,7 +17,8 @@
             <img :src="'/2023/imgs/2023/SITCON&GDSC_logo_BIG.svg'" alt />
           </div>
           <div class="fade-in" id="first-section-title">學生社群大亂鬥</div>
-          <div class="datefont">2023 07/29~07/30 國立臺灣科技大學</div>
+          <div class="datefont">@COSCUP 2023</div>
+          <div class="datefont">2023 07/29 ~ 07/30 國立臺灣科技大學</div>
         </div>
       </div>
       <div class="mb-5">
@@ -43,9 +44,9 @@
         <div>
           <div class="introsectioncontect">
             <div class="introsectioncontecttext">
-              <p>學生社群大亂鬥是由 SITCON 學生計算機年會與 Google Developer Student Clubs Taiwan & Hong Kong (GDSC) 組成的學生社群議程軌。</p>
-              <p>作為學生展現自己的舞台，我們期待以學生為主體的稿件，例如：從學生角度出發的經驗分享、技術分享，專題研究成果、獨立研究甘苦談，或探討學生相關議題等等。</p>
-              <p>任何與資訊科技、電腦技術相關的講題，或是與 Google 技術、Google Developers 社群相關的投稿，我們都非常歡迎！</p>
+              <p>疫情打亂 SITCON 年會舉辦在春季的慣例，考量參與學生們的學期規劃及企業實習招募期程，2024 年會將回到 3/9 舉辦！那 2023 呢？</p>
+			  <p>今年，SITCON 學生計算機年會與 Google Developer Student Clubs Taiwan & Hong Kong (GDSC) 合作，在 <a href="https://coscup.org/2023/">COSCUP 2023</a> 主持「學生社群大亂鬥」的議程軌，讓學生們來到開源年度盛會分享與交流知識！</p>
+			  <p><a href="https://coscup.org/2023/">COSCUP 2023</a> 於 7/29, 30 在國立臺灣科技大學舉辦，不用報名直接到場參與即可，期待與您相見！</p>
             </div>
             <div class="introsectioncontectimg">
               <img :src="'/2023/imgs/2023/SITCON&GDSC_logo.svg'">
@@ -71,15 +72,13 @@
         <div>
           <div class="introsectioncontect">
             <div class="introsectioncontecttext">
-              還想在 SITCON 年會上進行發表嗎？今年到 5/22 截止 COSCUP 在台科大開始徵稿啦！由 SITCON 與 GDSC
-              攜手合作，「學生社群大亂鬥」帶來一個以學生為主體的議程軌，在這裡可以展現你的技能和經驗，也為自己的暑期增添色彩！
+              作為學生展現自己的舞台，我們期待以學生為主體的稿件，例如：從學生角度出發的經驗分享、技術分享，專題研究成果、獨立研究甘苦談，或探討學生相關議題等等。任何與資訊科技、電腦技術相關的講題，或是與 Google 技術、Google Developers 社群相關的投稿，我們都非常歡迎！
               <br><br>
-              不論你是從學生角度出發的經驗分享，還是探討學生相關議題，只要和資訊科技、電腦技術相關，或是社群相關，都歡迎投稿！你可以參考 SITCON 歷年的議程，或是 GDSC
-              去年的議程軌內容，發揮你的想像力，創造出屬於你的議程！
+			  您可以參考 SITCON 的歷年議程或 COSCUP 2022「GDSC x 技術 x 開源 x 社群」議程軌內容，發揮想像力，創造出屬於您的議程！
               <br><br>
               投稿截止日期是 5/22，詳細投稿方式和規定請點擊 <a
-                href="https://pretalx.coscup.org/coscup-2023/cfp?_gl=1*1gtde7e*_ga*MTQwNDQ3MzU1OS4xNjgxMTQ1MDM2*_ga_C9EMTMDSS1*MTY4MTQ0Njg5MC4zLjEuMTY4MTQ0OTU3MS4wLjAuMA..">官網連結</a>
-              。期待你的投稿！
+                href="https://pretalx.coscup.org/coscup-2023/cfp">COSCUP 投稿系統</a>
+              。投稿時請選擇「學生社群大亂鬥」議程軌，期待您的投稿！
             </div>
             <div class="introsectioncontectimg">
               <img :src="'/2023/imgs/2023/papers.svg'">
@@ -279,6 +278,7 @@ export default {
 }
 body{
   overflow-x: hidden;
+  background-color: #333;
 }
 head{
   display: none;
@@ -308,8 +308,8 @@ head{
   width: 100%;
   justify-content: center;
   align-items: center;
-  padding: 16px 0 0 16px;
   z-index: 1;
+  gap: 2.5%;
   background-color: transparent;
 }
 
@@ -318,11 +318,9 @@ head{
 }
 
 .navbar-item {
-  margin: 0 2.5% 0 2.5%;
   cursor: pointer;
   color: #ffffff;
 }
-
 .logo {
   margin: 0 2.5% 0 2.5%;
   cursor: pointer;
@@ -392,7 +390,6 @@ head{
 
 #indexContainer {
   background: url(/2023/imgs/2023/bg.svg) no-repeat;
-  background-color: #333333;
   height: 100vh;
   background-size: cover;
   background-position: center;
@@ -400,19 +397,16 @@ head{
 
 #introContainer {
   padding-top: 15vh;
-  background-color: #333333;
   height: 100%;
 }
 
 #promoteContainer {
   padding-top: 15vh;
-  background-color: #333333;
   height: 100%;
 }
 
 #admittanceContainer {
   padding-top: 15vh;
-  background-color: #333333;
   height: 100%;
 }
 
@@ -451,6 +445,7 @@ head{
 .mainlogo img {
   margin-top: 3%;
   height: 100%;
+  width: 100%;
 }
 
 #first-section-title {
@@ -780,5 +775,10 @@ head{
   .introsectioncontecttext {
     padding: 30% 5% 5% 5%;
   }
-}</style>
+  .logo {
+    margin: 0;
+  }
+}
+
+</style>
 
