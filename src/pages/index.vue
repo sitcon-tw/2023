@@ -166,7 +166,7 @@
             <br>
             <h5><strong> Google 學生開發者社團 Google Developer Student Clubs Taiwan & Hong Kong </strong></h5>
             <br>
-            <p>合作聯繫:<br><a href="mailto://contact@sitcon.org">contact@sitcon.org</a> </p>
+            <p>合作聯繫:<br><a href="mailto:contact@sitcon.org">contact@sitcon.org</a> </p>
             <p>{{ new Date().getFullYear() }} — <strong>SITCON X GDSC</strong></p>
           </div>
         </div>
