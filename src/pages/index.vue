@@ -146,7 +146,7 @@
           <div class="footersectioncontecttext">
             <span>
               <a color="white" v-for="icon in iconLinks" :key="icon" :class="icon.icon" :icon="icon.icon"
-                :href="icon.link" class="btnicon" variant="text">
+                :href="icon.link" :rel="icon.rel" class="btnicon" variant="text">
               </a>
             </span>
             <br>
@@ -245,7 +245,8 @@ export default {
       {
         name: "Mastodon",
         link: "https://g0v.social/@sitcontw",
-        icon: "bi-mastodon"
+        icon: "bi-mastodon",
+        rel: "me"
       }
     ],
     years: [2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022]
