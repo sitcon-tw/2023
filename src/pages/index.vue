@@ -45,8 +45,9 @@
           <div class="introsectioncontect">
             <div class="introsectioncontecttext">
               <p>疫情打亂 SITCON 年會舉辦在春季的慣例，考量參與學生們的學期規劃及企業實習招募期程，2024 年會將回到 3/9 舉辦！那 2023 呢？</p>
-			  <p>今年，SITCON 學生計算機年會與 Google Developer Student Clubs Taiwan & Hong Kong (GDSC) 合作，在 <a href="https://coscup.org/2023/">COSCUP 2023</a> 主持「學生社群大亂鬥」的議程軌，讓學生們來到開源年度盛會分享與交流知識！</p>
-			  <p><a href="https://coscup.org/2023/">COSCUP 2023</a> 於 7/29, 30 在國立臺灣科技大學舉辦，不用報名直接到場參與即可，期待與您相見！</p>
+              <p>今年，SITCON 學生計算機年會與 Google Developer Student Clubs Taiwan & Hong Kong (GDSC) 合作，在 <a
+                  href="https://coscup.org/2023/">COSCUP 2023</a> 主持「學生社群大亂鬥」的議程軌，讓學生們來到開源年度盛會分享與交流知識！</p>
+              <p><a href="https://coscup.org/2023/">COSCUP 2023</a> 於 7/29, 30 在國立臺灣科技大學舉辦，不用報名直接到場參與即可，期待與您相見！</p>
             </div>
             <div class="introsectioncontectimg">
               <img :src="'/2023/imgs/2023/SITCON&GDSC_logo.svg'">
@@ -72,16 +73,86 @@
         <div>
           <div class="introsectioncontect">
             <div class="introsectioncontecttext">
-              作為學生展現自己的舞台，我們期待以學生為主體的稿件，例如：從學生角度出發的經驗分享、技術分享，專題研究成果、獨立研究甘苦談，或探討學生相關議題等等。任何與資訊科技、電腦技術相關的講題，或是與 Google 技術、Google Developers 社群相關的投稿，我們都非常歡迎！
+              作為學生展現自己的舞台，我們期待以學生為主體的稿件，例如：從學生角度出發的經驗分享、技術分享，專題研究成果、獨立研究甘苦談，或探討學生相關議題等等。任何與資訊科技、電腦技術相關的講題，或是與 Google
+              技術、Google Developers 社群相關的投稿，我們都非常歡迎！
               <br><br>
-			  您可以參考 SITCON 的歷年議程或 COSCUP 2022「GDSC x 技術 x 開源 x 社群」議程軌內容，發揮想像力，創造出屬於您的議程！
+              您可以參考 SITCON 的歷年議程或 COSCUP 2022「GDSC x 技術 x 開源 x 社群」議程軌內容，發揮想像力，創造出屬於您的議程！
               <br><br>
-              投稿截止日期是 5/22，詳細投稿方式和規定請點擊 <a
-                href="https://pretalx.coscup.org/coscup-2023/cfp">COSCUP 投稿系統</a>
+              投稿截止日期是 5/22，詳細投稿方式和規定請點擊 <a href="https://pretalx.coscup.org/coscup-2023/cfp">COSCUP 投稿系統</a>
               。投稿時請選擇「學生社群大亂鬥」議程軌，期待您的投稿！
             </div>
             <div class="introsectioncontectimg">
               <img :src="'/2023/imgs/2023/papers.svg'">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- 議程表 -->
+  <div class="container-fluid" id="agendaContainer">
+    <div data-aos="fade-right" class="fc">
+      <div id="agendasection" class="sectionboxcenter">
+        <div class="introsectiontitle">
+          <div class="sword">
+            <img :src="'/2023/imgs/2023/sword.svg'" alt />
+          </div>
+          <div class="introsectiontitlecontect">
+            議程表 Agenda
+            <div class="introsectiontitle-bgblue"></div>
+          </div>
+        </div>
+        <div>
+          <div class="agenda-time">
+            <div class="agenda-time-item">
+              <div class="agenda-time-item-head">
+                <div class="day">
+                  <h3>Day1</h3>
+                </div>
+                <div class="date">
+                  <h4>2023/07/29</h4>
+                </div>
+                <div class="room">
+                  <h5>Room214</h5>
+                </div>
+              </div>
+              <div class="agenda-card-group">
+                <div class="agenda-card-item" v-for="agenda in AgendaDay1" :key="agenda">
+                  <div class="card-head">{{ agenda.time }}</div>
+                  <div class="card-body">
+                    <div class="card-body-title">
+                      <h3>{{ agenda.title }}</h3>
+                    </div>
+                    <div class="card-body-name">{{ agenda.speaker }}</div>
+                  </div>
+                  <div class="card-footer-content">{{ agenda.source }}</div>
+                </div>
+              </div>
+            </div>
+            <div class="agenda-time-item">
+              <div class="agenda-time-item-head">
+                <div class="day">
+                  <h3>Day2</h3>
+                </div>
+                <div class="date">
+                  <h4>2023/07/30</h4>
+                </div>
+                <div class="room">
+                  <h5>Room214</h5>
+                </div>
+              </div>
+              <div class="agenda-card-group">
+                <div class="agenda-card-item" v-for="agenda in AgendaDay2" :key="agenda">
+                  <div class="card-head">{{ agenda.time }}</div>
+                  <div class="card-body">
+                    <div class="card-body-title">
+                      <h3>{{ agenda.title }}</h3>
+                    </div>
+                    <div class="card-body-name">{{ agenda.speaker }}</div>
+                  </div>
+                  <div class="card-footer-content">{{ agenda.source }}</div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -107,26 +178,26 @@
               <h4><strong>今年 COSCUP 2023 在國立臺灣科技大學舉辦，<br>「免費入場」且無須進行報名，到現場即可直接參與！</strong></h4>
               <br>
               <h5><strong>捷運</strong></h5>
-                <ul>
-                  <li>松山新店線（綠線）：由公館站 2 號「銘傳國小」出口左轉，沿台大舟山路步行，於鹿鳴堂右轉，過基隆路後左行即可到達；或於公館站 1 號「水源市場」出口轉乘 1、673、907、綠 11、棕 12 直達。
+              <ul>
+                <li>松山新店線（綠線）：由公館站 2 號「銘傳國小」出口左轉，沿台大舟山路步行，於鹿鳴堂右轉，過基隆路後左行即可到達；或於公館站 1 號「水源市場」出口轉乘 1、673、907、綠 11、棕 12 直達。
                 </li>
-                  <li>文湖線（棕線）：於捷運六張犁站（往公館、永和方向）轉乘 1、207、672、650、基隆客運板基線直達。</li>
-                </ul>
-                <h5><strong>公車</strong></h5>
-                <ul>
-                  <li>聯營 1、207、254、275、275 副線、275 區間車、650、672、673、907、綠 11、棕 12、敦化幹線，於「臺灣科技大學」下車。</li>
-                </ul>
-                <h5><strong>臺鐵、高鐵</strong></h5>
-                <ul>
-                  <li>由台北車站搭乘捷運淡水信義（紅）線至中正紀念堂站，轉乘綠線至公館站 2 號「銘傳國小」出口左轉，沿台大舟山路步行，於鹿鳴堂右轉，過基隆路後左行即可到達；或於公館站 1 號「水源市場」出口轉乘
+                <li>文湖線（棕線）：於捷運六張犁站（往公館、永和方向）轉乘 1、207、672、650、基隆客運板基線直達。</li>
+              </ul>
+              <h5><strong>公車</strong></h5>
+              <ul>
+                <li>聯營 1、207、254、275、275 副線、275 區間車、650、672、673、907、綠 11、棕 12、敦化幹線，於「臺灣科技大學」下車。</li>
+              </ul>
+              <h5><strong>臺鐵、高鐵</strong></h5>
+              <ul>
+                <li>由台北車站搭乘捷運淡水信義（紅）線至中正紀念堂站，轉乘綠線至公館站 2 號「銘傳國小」出口左轉，沿台大舟山路步行，於鹿鳴堂右轉，過基隆路後左行即可到達；或於公館站 1 號「水源市場」出口轉乘
                   1、673、907、綠 11、棕 12 直達。</li>
-                </ul>  
-                <h5><strong>自行開車</strong></h5>
-                <ul>
-                  <li>中山高速公路（國道一號）：下圓山交流道，接台北市建國南北高架道路，下辛亥路往木柵方向行駛，於辛亥路二段與基隆路交叉口（台大校園旁）右轉，過長興街後即可到達。</li>
-                  <li>北二高（國道三號）：接台北聯絡道，於辛亥路三段與基隆路交叉口左轉，過長興街後即可到達。</li>
-                </ul>
-              
+              </ul>
+              <h5><strong>自行開車</strong></h5>
+              <ul>
+                <li>中山高速公路（國道一號）：下圓山交流道，接台北市建國南北高架道路，下辛亥路往木柵方向行駛，於辛亥路二段與基隆路交叉口（台大校園旁）右轉，過長興街後即可到達。</li>
+                <li>北二高（國道三號）：接台北聯絡道，於辛亥路三段與基隆路交叉口左轉，過長興街後即可到達。</li>
+              </ul>
+
             </div>
             <div class="introsectioncontectmap">
               <iframe
@@ -249,11 +320,87 @@ export default {
         rel: "me"
       }
     ],
+    AgendaDay1:[
+    {
+      time:"09:30-10:00",
+      title:"On the Way to the Open Source",
+      speaker:"Si manglam",
+      source:"Student Adventure Time"
+    },
+    {
+      time:"10:20-10:50",
+      title:"在學校開機場把自己的學費賺回來！",
+      speaker:"Mark Hung,№Ball,kevin_xheng",
+      source:"Student Adventure Time"
+    },
+    {
+      time:"11:10-11:40",
+      title:"我在 FreeBSD Taiwan 實習的心得跟過程",
+      speaker:"王彥皓",
+      source:"Student Adventure Time"
+    },
+    {
+      time:"13:00–13:30",
+      title:"學生自治之 DAO ——開放學生自治組織白皮書",
+      speaker:"Sky Hong",
+      source:"Student Adventure Time"
+    },
+    {
+      time:"13:50–14:20",
+      title:"從只會 Docker 到上手 Kubernetes",
+      speaker:"uccu",
+      source:"Student Adventure Time"
+    },
+    {
+      time:"14:40–15:10",
+      title:"Intro to ROS:自駕車專題分享",
+      speaker:"uccu",
+      source:"Bonki"
+    },
+    {
+      time:"15:30–16:00",
+      title:"關於我從做專題到發論文這檔事",
+      speaker:"Andy Chiang",
+      source:"Student Adventure Time"
+    },
+  ],
+    AgendaDay2:[
+    {
+      time:"09:30–10:00",
+      title:"假如我年少有為不自卑——作為學生，你也可以進行開源貢獻！",
+      speaker:"火山 / Kazan",
+      source:"Student Adventure Time"
+    },
+    {
+      time:"10:20–10:50",
+      title:"Django REST View 到底有哪些寫法哩 我好像都只用 APIView 呢?",
+      speaker:"FKT",
+      source:"Student Adventure Time"
+    },
+    {
+      time:"11:10–11:40",
+      title:"從自己玩 Side Project 到 貢獻開源",
+      speaker:"VP",
+      source:"Student Adventure Time"
+    },
+    {
+      time:"13:05–13:35",
+      title:"Nix Flakes: Toward Portable, Reproducible and Dependency-Isolated General-Purpose Development Environments",
+      speaker:"Yueh-Shun Li (ShamrockLee)",
+      source:"Student Adventure Time"
+    },
+    {
+      time:"13:50–14:20",
+      title:"你說啥? 沒有 test 要怎麼 CI 啦? 工人智慧 test，您 CI 的最佳選擇。",
+      speaker:"№Ball,Mark Hung",
+      source:"Student Adventure Time"
+    },
+  ],
     years: [2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022]
   }),
   mounted() {
     AOS.init();
-    
+
     // 取得Navbar元素
     const navbar = document.getElementById('navbar');
 
@@ -276,21 +423,27 @@ export default {
 
 </script>
 <style>
-*{
+* {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
-*, :after, :before{
+
+*,
+:after,
+:before {
   background-repeat: no-repeat;
 }
-body{
+
+body {
   overflow-x: hidden;
   background-color: #333;
 }
-head{
+
+head {
   display: none;
 }
+
 .fade-in {
   opacity: 0;
   animation-name: fade-in;
@@ -329,6 +482,7 @@ head{
   cursor: pointer;
   color: #ffffff;
 }
+
 .logo {
   margin: 0 2.5% 0 2.5%;
   cursor: pointer;
@@ -409,6 +563,11 @@ head{
 }
 
 #promoteContainer {
+  padding-top: 15vh;
+  height: 100%;
+}
+
+#agendaContainer {
   padding-top: 15vh;
   height: 100%;
 }
@@ -494,6 +653,11 @@ head{
 #promotesection {
   box-shadow: 0px 0px 15px 5px #4285F4, 0px 0px 15px 5px #4285F4 inset;
   border-radius: 15px 0px 0px 15px;
+}
+
+#agendasection {
+  box-shadow: 0px 0px 15px 5px #4285F4, 0px 0px 15px 5px #4285F4 inset;
+  border-radius: 15px;
 }
 
 #admittancesection {
@@ -661,6 +825,81 @@ head{
   background-color: rgba(105, 105, 105, 0.3);
 }
 
+/* agenda */
+.agenda-time {
+  width: 90%;
+  margin: auto;
+  flex-direction: row;
+  flex-wrap: wrap;
+  display: flex;
+  color: #FFF;
+}
+
+.agenda-time-item-head {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #4285F4;
+  border-radius: 5px;
+  box-shadow: 0px 0px 15px 5px #4285F4, 0px 0px 15px 5px #4285F4 inset;
+  border: 3px #ffffff solid;
+  margin-bottom: 2vw;
+}
+
+.agenda-time-item {
+  width: 50%;
+  padding: 1vw;
+}
+
+.room {
+  width: 100%;
+  border-top: 3px #ffffff solid;
+  background-color: #333;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 8px;
+  border-radius: 0px 0px 5px 5px;
+}
+
+.agenda-card-item {
+  box-shadow: 0px 0px 15px 5px #4285F4, 0px 0px 15px 5px #4285F4 inset;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+  margin-bottom: 2vw;
+}
+
+.card-head {
+  background-color: #4285F4;
+  border-radius: 5px 5px 0px 0px;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+}
+
+.card-body {
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #333;
+  background-color: #ffffff;
+}
+
+.card-body-name {
+  color: #999;
+}
+
+.card-footer-content {
+  display: flex;
+  justify-content: center;
+  color: #4285F4;
+  background-color: #ffffff;
+  border-radius: 0px 0px 5px 5px;
+}
+
 @keyframes jump {
   0% {
     transform: translate(0%, 0%);
@@ -783,10 +1022,17 @@ head{
   .introsectioncontecttext {
     padding: 30% 5% 5% 5%;
   }
+
   .logo {
     margin: 0;
   }
-}
 
-</style>
+  .agenda-time-item {
+    width: 100%;
+  }
+  .agenda-card-item,.agenda-time-item-head{
+    margin-bottom: 5vw;
+
+  }
+}</style>
 
