@@ -58,37 +58,37 @@
     </div>
   </div>
   <!-- 稿件招募 -->
-  <div class="container-fluid" id="promoteContainer">
-    <div data-aos="fade-left" class="fl">
-      <div id="promotesection" class="sectionbox">
-        <div class="introsectiontitle">
-          <div class="sword">
-            <img :src="'/2023/imgs/2023/sword.svg'" alt />
-          </div>
-          <div class="introsectiontitlecontect">
-            稿件招募 Call For Proposals
-            <div class="introsectiontitle-bgblue"></div>
-          </div>
-        </div>
-        <div>
-          <div class="introsectioncontect">
-            <div class="introsectioncontecttext">
-              作為學生展現自己的舞台，我們期待以學生為主體的稿件，例如：從學生角度出發的經驗分享、技術分享，專題研究成果、獨立研究甘苦談，或探討學生相關議題等等。任何與資訊科技、電腦技術相關的講題，或是與 Google
-              技術、Google Developers 社群相關的投稿，我們都非常歡迎！
-              <br><br>
-              您可以參考 SITCON 的歷年議程或 COSCUP 2022「GDSC x 技術 x 開源 x 社群」議程軌內容，發揮想像力，創造出屬於您的議程！
-              <br><br>
-              投稿截止日期是 5/22，詳細投稿方式和規定請點擊 <a href="https://pretalx.coscup.org/coscup-2023/cfp">COSCUP 投稿系統</a>
-              。投稿時請選擇「學生社群大亂鬥」議程軌，期待您的投稿！
-            </div>
-            <div class="introsectioncontectimg">
-              <img :src="'/2023/imgs/2023/papers.svg'">
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
+<!--  <div class="container-fluid" id="promoteContainer">-->
+<!--    <div data-aos="fade-left" class="fl">-->
+<!--      <div id="promotesection" class="sectionbox">-->
+<!--        <div class="introsectiontitle">-->
+<!--          <div class="sword">-->
+<!--            <img :src="'/2023/imgs/2023/sword.svg'" alt />-->
+<!--          </div>-->
+<!--          <div class="introsectiontitlecontect">-->
+<!--            稿件招募 Call For Proposals-->
+<!--            <div class="introsectiontitle-bgblue"></div>-->
+<!--          </div>-->
+<!--        </div>-->
+<!--        <div>-->
+<!--          <div class="introsectioncontect">-->
+<!--            <div class="introsectioncontecttext">-->
+<!--              作為學生展現自己的舞台，我們期待以學生為主體的稿件，例如：從學生角度出發的經驗分享、技術分享，專題研究成果、獨立研究甘苦談，或探討學生相關議題等等。任何與資訊科技、電腦技術相關的講題，或是與 Google-->
+<!--              技術、Google Developers 社群相關的投稿，我們都非常歡迎！-->
+<!--              <br><br>-->
+<!--              您可以參考 SITCON 的歷年議程或 COSCUP 2022「GDSC x 技術 x 開源 x 社群」議程軌內容，發揮想像力，創造出屬於您的議程！-->
+<!--              <br><br>-->
+<!--              投稿截止日期是 5/22，詳細投稿方式和規定請點擊 <a href="https://pretalx.coscup.org/coscup-2023/cfp">COSCUP 投稿系統</a>-->
+<!--              。投稿時請選擇「學生社群大亂鬥」議程軌，期待您的投稿！-->
+<!--            </div>-->
+<!--            <div class="introsectioncontectimg">-->
+<!--              <img :src="'/2023/imgs/2023/papers.svg'">-->
+<!--            </div>-->
+<!--          </div>-->
+<!--        </div>-->
+<!--      </div>-->
+<!--    </div>-->
+<!--  </div>-->
   <!-- 議程表 -->
   <div class="container-fluid" id="agendaContainer">
     <div data-aos="fade-right" class="fc">
@@ -354,8 +354,8 @@ export default {
     {
       time:"14:40–15:10",
       title:"Intro to ROS:自駕車專題分享",
-      speaker:"uccu",
-      source:"Bonki"
+      speaker:"Bonki",
+      source:"Student Adventure Time"
     },
     {
       time:"15:30–16:00",
