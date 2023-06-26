@@ -1,523 +1,1038 @@
 <template>
-  <div>
-    <GeneralHead
-      page-title="首頁"
-      title="SITCON X"
-      description="在 SITCON 的第 X 週年，期望我們秉持初衷——讓學生們分享與交流知識，把各地學生串連起來的 X 字路口——也期望每個人能夠向貓咪學習，換個思維邏輯面對迷惘的現況，保持著好奇心與探索的樂趣，跳脫框架創造屬於自己的美好未來！"
-      image="https://sitcon.org/2022/imgs/og.jpg" />
+  <div class="navbarsection" id="navbar">
 
-    <div ref="border-container" class="container border-container">
-      <div class="banner">
-        <h1 class="name">SITCON 學生計算機年會</h1>
-        <svg-x-cat-in-a-maze class="x" />
-        <div class="wool-cat-one">
-          <img class="wool" :src="'/2022/imgs/cats/wool-orange.svg'" />
-          <cat-cover class="cat" />
+    <div class="navbar-item"><a href="#introContainer" class="btn navbarbtnred">關於我們</a></div>
+    <div class="navbar-item"><a href="#promoteContainer" class="btn navbarbtnblue">稿件招募</a></div>
+    <div class="logo">
+      <a href="#indexContainer"><img :src="'/2023/imgs/2023/SITCON&GDSC_logo.svg'" alt /></a>
+    </div>
+    <div class="navbar-item"><a href="#admittanceContainer" class="btn navbarbtngreen">入場方式</a></div>
+    <div class="navbar-item"><a href="#footerContainer" class="btn navbarbtnyellow">聯絡我們</a></div>
+  </div>
+  <div class="container-fluid" id="indexContainer">
+    <div class="text-center">
+      <div id="first-section">
+        <div class="fade-in">
+          <div class="mainlogo">
+            <img :src="'/2023/imgs/2023/SITCON&GDSC_logo_BIG.svg'" alt />
+          </div>
+          <div class="fade-in" id="first-section-title">學生社群大亂鬥</div>
+          <div class="datefont">@COSCUP 2023</div>
+          <div class="datefont">2023 07/29 ~ 07/30 國立臺灣科技大學</div>
         </div>
       </div>
-
-      <div class="info">
-        <h2 class="text">
-          2022 09/04<br>中央研究院 人文社會科學館
-        </h2>
-        <svg-arrow class="arrow" />
-        <svg-arrow class="arrow" />
-        <div class="btns">
-          <btn @click="dialogStore.signUpDialogOpened = true">參與活動</btn>
-          <btn to="/sponsor">支持我們</btn>
+      <div class="mb-5">
+        <div class="downicon">
+          <a href="#introContainer"><img :src="'/2023/imgs/2023/downicon.svg'" alt /></a>
         </div>
       </div>
-
-      <mint-box class="has-border">
-        <h1>年會主題</h1>
-        <img class="cat-in-a-maze pad1" :src="'/2022/imgs/cat-in-a-maze.svg'" />
-        <div class="pad2">
-          <p>Cat in a Maze 參考自 Rat in a Maze 這道經典演算法題目。題目描述一隻老鼠要走迷宮，在給定了迷宮形狀的前提下，要努力找出走出迷宮的出路。「Rat in a
-            Maze」這句話切實地反映了劇烈動盪時代下的學生們在面對未來的生涯發展時，猶如一隻無法逃避、勢必得進入體制這一迷宮的老鼠。</p>
-          <p class="rat-center">但是⋯⋯我們真的只能當老鼠嗎？</p>
-          <p>
-            不如，像貓咪一樣思考？以貓咪的個性，第一直覺想到的會是遇到迷宮時，直接破壞迷宮離開，或者是使用我們想不到的方式解決迷宮。同時貓咪相較於老鼠，對一切事物充滿好奇、敢於探索未知事物，不畏強權挑戰一切，這是貓咪獨特的個性。<br>
-            對於學生而言，充滿好奇、敢於探索未知事物相當重要，畢竟自己的未來要由自己來定義。當大家陷入迷惘的時候，比起使用老鼠比擬大家已經陷入迷惘，不如讓我們可以看看貓咪、學學貓咪，換個思維邏輯去面對迷惘的現況，保持著好奇心與探索的樂趣。又或者跳脫框架，創造屬於自己的美好未來。
-          </p>
-        </div>
-      </mint-box>
-
-      <mint-box class="has-border">
-        <h1>關於 SITCON</h1>
-        <div class="pad1">
-          <h2>About SITCON</h2>
-          <p>
-            學生計算機年會（Students’ Information Technology Conference）自 2013
-            年發起，以學生為本、由學生自發舉辦，長期投身學生資訊教育與推廣開源精神，希望引領更多學子踏入資訊的殿堂，更冀望所有對資訊有興趣的學生，能夠在年會裏齊聚一堂，彼此激盪、傳承、啟發，達到「學以致用、教學相長」的實際展現。<br>
-            <br>
-            在 SITCON 的第 X 週年，期望我們秉持初衷——讓學生們分享與交流知識，把各地學生串連起來的 X 字路口——也期望每人皆能在與大家的聊天與討論之中，找到自己的方向、熱情。
-          </p>
-        </div>
-      </mint-box>
-
-      <mint-box>
-        <h1>行為準則</h1>
-        <div class="pad1">
-          <h2>Code of Conduct</h2>
-          <p>
-            SITCON 歡迎不同身分、來自不同背景的與會者，也非常鼓勵女性、性少數與多元背景的參與者。為了讓大家都能愉快的參加 SITCON，我們要求所有參與者閱讀年會的行為準則（<a @click.prevent="cocModal = true">Code of
-              Conduct</a>），共同創造一個友善的環境。
-          </p>
-        </div>
-      </mint-box>
-
-      <div class="wool-cat-two">
-        <cat-flat-left class="cat" />
-        <img class="wool" :src="'/2022/imgs/cats/wool-green.svg'" />
-        <img class="cat" :src="'/2022/imgs/cats/cat-right.svg'" />
-      </div>
-
-      <mint-box>
-        <h1>參與討論</h1>
-        <div class="pad1">
-          <h2>Join the community</h2>
-          <p>
-            SITCON 是個開放的社群，許多籌備的相關事項都會在公開的郵件論壇上進行討論，如果有興趣參與，歡迎訂閱 SITCON 的郵件論壇並貢獻你的想法！<br />
-            <br>
-            若你想進一步了解 SITCON 年會籌備與討論的內容，也歡迎到 GitLab 上查看 SITCON 2022 的籌備歷程。
-          </p>
-          <div class="btns">
-            <btn href="https://groups.google.com/g/sitcon-general/">郵件論壇</btn>
-            <btn href="https://gitlab.com/sitcon-tw/2022/2022-board/-/issues">籌備紀錄</btn>
+    </div>
+  </div>
+  <!--社群介紹-->
+  <div class="container-fluid" id="introContainer">
+    <div data-aos="fade-right" class="fr">
+      <div id="introsection" class="sectionbox">
+        <div class="introsectiontitle">
+          <div class="sword">
+            <img :src="'/2023/imgs/2023/sword.svg'" alt />
+          </div>
+          <div class="introsectiontitlecontect">
+            學生社群大亂鬥 Student Adventure Time
+            <div class="introsectiontitle-bgred"></div>
           </div>
         </div>
-      </mint-box>
-
-      <img class="border-item left wool" style="display: none;" :src="'/2022/imgs/cats/wool-orange-flip.svg'" />
-      <cat-head-black class="border-item right cat" style="display: none; height: auto;" />
-    </div>
-
-    <ArrowDialog v-model="cocModal">
-      <h1>行為準則</h1>
-      <h2 class="pad4">Code of Conduct</h2>
-      <div class="pad3">
-        <p>SITCON 冀望打造屬於學生自己的舞台，而我們也致力於為社群中的每位成員提供更友善、開放的環境。我們相信每位參與社群活動的夥伴都值得被尊重，而我們會盡力提供最安全的環境，讓參與 SITCON
-          盛會的每位朋友能夠認識個體間的差異、在社群中相互扶助、並鼓勵每個人揮灑屬於自己生命的色彩。</p>
-        <p>因此，若有幸能在 SITCON 社群與您見面，無論您是以與會者、贊助商、工作人員、或是講者的身分參加活動，我們都希望您遵守以下的行為準則：</p>
-        <ul class="pad4">
-          <li>尊重每一位參與者，將對方的感受放在心上。</li>
-          <li>避免使用帶有侮辱、歧視、或具有潛在騷擾意涵的文字、言語及肢體動作。</li>
-          <li>多關心周遭的社群夥伴，適度詢問對方是否需要協助。</li>
-          <li>當遭遇危險、或發現事情不對勁時，適時尋求工作人員的支援與協助。</li>
-          <li>在活動裡多交朋友，珍惜彼此相聚的時光！</li>
-        </ul>
-        <p>以下的行為是不被社群所容忍的：</p>
-        <ul class="pad4">
-          <li>歧視行為，包含針對性別、性向、種族、外貌、宗教、年齡、身體狀況或個人身分的挑釁、冒犯、錯稱或差別待遇。</li>
-          <li>騷擾行為，包含性騷擾、造成當事人反感的綽號或肢體接觸，以及任何形式的言語或肢體霸凌。</li>
-          <li>公開發表、展示或放映含有侮辱、歧視、仇恨、暴力、或是性暗示的言論或影像。</li>
-          <li>無故干擾議程或活動的正常進行，無視工作人員或與會者的制止。</li>
-          <li>干擾、攻擊活動場地網路，未經同意蒐集或散佈個人資料。</li>
-          <li>其他違反法律的行為。</li>
-        </ul>
-        <p>為了確保每位參與者的安全，我們將恪守以上規則。違反行為準則的參與者，我們將採取必要且合理的手段予以介入，包含但不限於將參與者請離現場、自相關名冊除名或列為不受歡迎對象，或在必要時移送警察機關法辦。若您或他人遇到了以上情況、或是有任何其他顧慮，都請立即尋求 SITCON
-          工作人員的協助。</p>
-        <p>我們誠摯地邀請來到 SITCON 的朋友一同履行以上承諾，將 SITCON 打造為更友善、更溫暖的所在；讓每一位參與者，都能在社群的交流中共同成長、在人與人的互動中找到自信——而這正是我們所珍惜的、屬於學生社群的真正精神。</p>
+        <div>
+          <div class="introsectioncontect">
+            <div class="introsectioncontecttext">
+              <p>疫情打亂 SITCON 年會舉辦在春季的慣例，考量參與學生們的學期規劃及企業實習招募期程，2024 年會將回到 3/9 舉辦！那 2023 呢？</p>
+              <p>今年，SITCON 學生計算機年會與 Google Developer Student Clubs Taiwan & Hong Kong (GDSC) 合作，在 <a
+                  href="https://coscup.org/2023/">COSCUP 2023</a> 主持「學生社群大亂鬥」的議程軌，讓學生們來到開源年度盛會分享與交流知識！</p>
+              <p><a href="https://coscup.org/2023/">COSCUP 2023</a> 於 7/29, 30 在國立臺灣科技大學舉辦，不用報名直接到場參與即可，期待與您相見！</p>
+            </div>
+            <div class="introsectioncontectimg">
+              <img :src="'/2023/imgs/2023/SITCON&GDSC_logo.svg'">
+            </div>
+          </div>
+        </div>
       </div>
-    </ArrowDialog>
+    </div>
+  </div>
+  <!-- 稿件招募 -->
+  <div class="container-fluid" id="promoteContainer">
+    <div data-aos="fade-left" class="fl">
+      <div id="promotesection" class="sectionbox">
+        <div class="introsectiontitle">
+          <div class="sword">
+            <img :src="'/2023/imgs/2023/sword.svg'" alt />
+          </div>
+          <div class="introsectiontitlecontect">
+            稿件招募 Call For Proposals
+            <div class="introsectiontitle-bgblue"></div>
+          </div>
+        </div>
+        <div>
+          <div class="introsectioncontect">
+            <div class="introsectioncontecttext">
+              作為學生展現自己的舞台，我們期待以學生為主體的稿件，例如：從學生角度出發的經驗分享、技術分享，專題研究成果、獨立研究甘苦談，或探討學生相關議題等等。任何與資訊科技、電腦技術相關的講題，或是與 Google
+              技術、Google Developers 社群相關的投稿，我們都非常歡迎！
+              <br><br>
+              您可以參考 SITCON 的歷年議程或 COSCUP 2022「GDSC x 技術 x 開源 x 社群」議程軌內容，發揮想像力，創造出屬於您的議程！
+              <br><br>
+              投稿截止日期是 5/22，詳細投稿方式和規定請點擊 <a href="https://pretalx.coscup.org/coscup-2023/cfp">COSCUP 投稿系統</a>
+              。投稿時請選擇「學生社群大亂鬥」議程軌，期待您的投稿！
+            </div>
+            <div class="introsectioncontectimg">
+              <img :src="'/2023/imgs/2023/papers.svg'">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- 議程表 -->
+  <div class="container-fluid" id="agendaContainer">
+    <div data-aos="fade-right" class="fc">
+      <div id="agendasection" class="sectionboxcenter">
+        <div class="introsectiontitle">
+          <div class="sword">
+            <img :src="'/2023/imgs/2023/sword.svg'" alt />
+          </div>
+          <div class="introsectiontitlecontect">
+            議程表 Agenda
+            <div class="introsectiontitle-bgblue"></div>
+          </div>
+        </div>
+        <div>
+          <div class="agenda-time">
+            <div class="agenda-time-item">
+              <div class="agenda-time-item-head">
+                <div class="day">
+                  <h3>Day1</h3>
+                </div>
+                <div class="date">
+                  <h4>2023/07/29</h4>
+                </div>
+                <div class="room">
+                  <h5>Room214</h5>
+                </div>
+              </div>
+              <div class="agenda-card-group">
+                <div class="agenda-card-item" v-for="agenda in AgendaDay1" :key="agenda">
+                  <div class="card-head">{{ agenda.time }}</div>
+                  <div class="card-body">
+                    <div class="card-body-title">
+                      <h3>{{ agenda.title }}</h3>
+                    </div>
+                    <div class="card-body-name">{{ agenda.speaker }}</div>
+                  </div>
+                  <div class="card-footer-content">{{ agenda.source }}</div>
+                </div>
+              </div>
+            </div>
+            <div class="agenda-time-item">
+              <div class="agenda-time-item-head">
+                <div class="day">
+                  <h3>Day2</h3>
+                </div>
+                <div class="date">
+                  <h4>2023/07/30</h4>
+                </div>
+                <div class="room">
+                  <h5>Room214</h5>
+                </div>
+              </div>
+              <div class="agenda-card-group">
+                <div class="agenda-card-item" v-for="agenda in AgendaDay2" :key="agenda">
+                  <div class="card-head">{{ agenda.time }}</div>
+                  <div class="card-body">
+                    <div class="card-body-title">
+                      <h3>{{ agenda.title }}</h3>
+                    </div>
+                    <div class="card-body-name">{{ agenda.speaker }}</div>
+                  </div>
+                  <div class="card-footer-content">{{ agenda.source }}</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- 入場方式-->
+  <div class="container-fluid" id="admittanceContainer">
+    <div data-aos="fade-right" class="fc">
+      <div id="admittancesection" class="sectionboxcenter">
+        <div class="introsectiontitle">
+          <div class="sword">
+            <img :src="'/2023/imgs/2023/sword.svg'" alt />
+          </div>
+          <div class="introsectiontitlecontect">
+            入場方式 Admittance method
+            <div class="introsectiontitle-bggreen"></div>
+          </div>
+        </div>
+        <div>
+          <div class="introsectioncontect">
+            <div class="introsectioncontecttext">
+              <h4><strong>今年 COSCUP 2023 在國立臺灣科技大學舉辦，<br>「免費入場」且無須進行報名，到現場即可直接參與！</strong></h4>
+              <br>
+              <h5><strong>捷運</strong></h5>
+              <ul>
+                <li>松山新店線（綠線）：由公館站 2 號「銘傳國小」出口左轉，沿台大舟山路步行，於鹿鳴堂右轉，過基隆路後左行即可到達；或於公館站 1 號「水源市場」出口轉乘 1、673、907、綠 11、棕 12 直達。
+                </li>
+                <li>文湖線（棕線）：於捷運六張犁站（往公館、永和方向）轉乘 1、207、672、650、基隆客運板基線直達。</li>
+              </ul>
+              <h5><strong>公車</strong></h5>
+              <ul>
+                <li>聯營 1、207、254、275、275 副線、275 區間車、650、672、673、907、綠 11、棕 12、敦化幹線，於「臺灣科技大學」下車。</li>
+              </ul>
+              <h5><strong>臺鐵、高鐵</strong></h5>
+              <ul>
+                <li>由台北車站搭乘捷運淡水信義（紅）線至中正紀念堂站，轉乘綠線至公館站 2 號「銘傳國小」出口左轉，沿台大舟山路步行，於鹿鳴堂右轉，過基隆路後左行即可到達；或於公館站 1 號「水源市場」出口轉乘
+                  1、673、907、綠 11、棕 12 直達。</li>
+              </ul>
+              <h5><strong>自行開車</strong></h5>
+              <ul>
+                <li>中山高速公路（國道一號）：下圓山交流道，接台北市建國南北高架道路，下辛亥路往木柵方向行駛，於辛亥路二段與基隆路交叉口（台大校園旁）右轉，過長興街後即可到達。</li>
+                <li>北二高（國道三號）：接台北聯絡道，於辛亥路三段與基隆路交叉口左轉，過長興街後即可到達。</li>
+              </ul>
+
+            </div>
+            <div class="introsectioncontectmap">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14455.616113270356!2d121.538498!3d25.013694!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x9e4a4e741c4d6156!2z6ZuE6I-v5Y-w5Y2B5L2N5bGx6Lev5Y2A5aSp!5e0!3m2!1szh-TW!2stw!4v1617914503814!5m2!1szh-TW!2stw"
+                width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- footer -->
+  <div class="container-fluid" id="footerContainer">
+    <div data-aos="fade-left" class="fc">
+      <div id="footersection" class="sectionboxcenter">
+        <div class="footercontect">
+          <div class="footersectioncontecttext">
+            <span>
+              <a color="white" v-for="icon in iconLinks" :key="icon" :class="icon.icon" :icon="icon.icon"
+                :href="icon.link" :rel="icon.rel" class="btnicon" variant="text">
+              </a>
+            </span>
+            <br>
+            <br>
+            <span>
+              <span>
+                <p><strong>歷年網站</strong></p>
+                <a color="black" class="btn btnyellow" v-for="(year, index) in years" :key="index"
+                  :href="`https://sitcon.org/${year}`" target="_blank" variant="text">
+                  {{ year }}
+                </a>
+              </span>
+            </span>
+            <br>
+            <br>
+            <h5><strong> 學生計算機年會 Students' Information Technology Conference </strong></h5>
+            <br>
+            <h5><strong> Google 學生開發者社團 Google Developer Student Clubs Taiwan & Hong Kong </strong></h5>
+            <br>
+            <p>合作聯繫：<br><a href="mailto:contact@sitcon.org">contact@sitcon.org</a> </p>
+            <p>{{ new Date().getFullYear() }} — <strong>SITCON X GDSC</strong></p>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 </template>
+
 <script>
-import { useDialogStore } from '../store/dialog'
-import * as d3 from "d3";
+import AOS from "aos";
+import "aos/dist/aos.css";
+
+
 export default {
-  setup() {
-    const dialogStore = useDialogStore()
-    return { dialogStore }
-  },
-  data() {
-    return {
-      cocModal: false,
-      timers: []
-    }
-  },
+  name: "IndexView",
+  data: () => ({
+    ecosystem: [
+      {
+        text: "vuetify-loader",
+        href: "https://github.com/vuetifyjs/vuetify-loader/tree/next"
+      },
+      {
+        text: "github",
+        href: "https://github.com/vuetifyjs/vuetify/tree/next"
+      },
+      {
+        text: "awesome-vuetify",
+        href: "https://github.com/vuetifyjs/awesome-vuetify"
+      }
+    ],
+    importantLinks: [
+      {
+        text: "Frontend GitHub",
+        href: "https://github.com/fan9704/MQTT-Frontend"
+      },
+      {
+        text: "Backend GitHub",
+        href: "https://github.com/fan9704/PetMonitoringSystem-Backend"
+      },
+      {
+        text: "Application GitHub",
+        href: "https://github.com/fan9704/PetMonitoringSystem-Application"
+      },
+      {
+        text: "Hardware GitHub",
+        href: "https://github.com/fan9704/PetMonitoringSystem-Hardware"
+      }
+    ],
+    icons: ["bi-facebook", "bi-instagram", "bi-twitter", "bi-linkedin"],
+    iconLinks: [
+      {
+        name: "Facebook",
+        link: "https://www.facebook.com/SITCONtw/",
+        icon: "bi-facebook"
+      },
+      {
+        name: "Instagram",
+        link: "https://www.instagram.com/sitcon.tw/",
+        icon: "bi-instagram"
+      },
+      {
+        name: "Telegram",
+        link: "https://sitcon.org/tg",
+        icon: "bi-telegram"
+      },
+      {
+        name: "Twitter",
+        link: "https://sitcon.org/twitter",
+        icon: "bi-twitter"
+      },
+      {
+        name: "Youtube",
+        link: "https://sitcon.org/yt",
+        icon: "bi-youtube"
+      },
+      {
+        name: "Mastodon",
+        link: "https://g0v.social/@sitcontw",
+        icon: "bi-mastodon",
+        rel: "me"
+      }
+    ],
+    AgendaDay1:[
+    {
+      time:"09:30-10:00",
+      title:"On the Way to the Open Source",
+      speaker:"Si manglam",
+      source:"Student Adventure Time"
+    },
+    {
+      time:"10:20-10:50",
+      title:"在學校開機場把自己的學費賺回來！",
+      speaker:"Mark Hung,№Ball,kevin_xheng",
+      source:"Student Adventure Time"
+    },
+    {
+      time:"11:10-11:40",
+      title:"我在 FreeBSD Taiwan 實習的心得跟過程",
+      speaker:"王彥皓",
+      source:"Student Adventure Time"
+    },
+    {
+      time:"13:00–13:30",
+      title:"學生自治之 DAO ——開放學生自治組織白皮書",
+      speaker:"Sky Hong",
+      source:"Student Adventure Time"
+    },
+    {
+      time:"13:50–14:20",
+      title:"從只會 Docker 到上手 Kubernetes",
+      speaker:"uccu",
+      source:"Student Adventure Time"
+    },
+    {
+      time:"14:40–15:10",
+      title:"Intro to ROS:自駕車專題分享",
+      speaker:"uccu",
+      source:"Bonki"
+    },
+    {
+      time:"15:30–16:00",
+      title:"關於我從做專題到發論文這檔事",
+      speaker:"Andy Chiang",
+      source:"Student Adventure Time"
+    },
+  ],
+    AgendaDay2:[
+    {
+      time:"09:30–10:00",
+      title:"假如我年少有為不自卑——作為學生，你也可以進行開源貢獻！",
+      speaker:"火山 / Kazan",
+      source:"Student Adventure Time"
+    },
+    {
+      time:"10:20–10:50",
+      title:"Django REST View 到底有哪些寫法哩 我好像都只用 APIView 呢?",
+      speaker:"FKT",
+      source:"Student Adventure Time"
+    },
+    {
+      time:"11:10–11:40",
+      title:"從自己玩 Side Project 到 貢獻開源",
+      speaker:"VP",
+      source:"Student Adventure Time"
+    },
+    {
+      time:"13:05–13:35",
+      title:"Nix Flakes: Toward Portable, Reproducible and Dependency-Isolated General-Purpose Development Environments",
+      speaker:"Yueh-Shun Li (ShamrockLee)",
+      source:"Student Adventure Time"
+    },
+    {
+      time:"13:50–14:20",
+      title:"你說啥? 沒有 test 要怎麼 CI 啦? 工人智慧 test，您 CI 的最佳選擇。",
+      speaker:"№Ball,Mark Hung",
+      source:"Student Adventure Time"
+    },
+  ],
+    years: [2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022]
+  }),
   mounted() {
-    this.$nextTick(() => {
-      this.wrapDrawBorder()
-    })
-    window.addEventListener('resize', this.wrapDrawBorder)
-  },
-  unmounted() {
-    this.clearTimers()
-    window.removeEventListener('resize', this.wrapDrawBorder)
-  },
-  methods: {
-    clearTimers() {
-      for (const timer of this.timers) {
-        clearTimeout(timer)
-      }
-    },
-    wrapDrawBorder() {
-      this.clearTimers()
-      this.drawBorder()
-      for (let i of [100, 1000, 5000, 10000]) {
-        this.timers.push(setTimeout(() => this.drawBorder(), i))
-      }
-    },
-    drawBorder() {
-      const container = this.$refs['border-container']
-      const { height: ctH } = container.getBoundingClientRect()
-      const { innerWidth: vW } = window
-      const small_size = window.innerWidth <= 768
-      const stroke = !small_size ? 8 : 4
-      const radius = parseInt(window.getComputedStyle(container).getPropertyValue('--border-radius'))
-      const short_radius = radius * .3
+    AOS.init();
 
-      const { width: bW, height: bH } = container.querySelector('.banner').getBoundingClientRect()
-      const bGap = (vW - bW) / 2
-      const { width: iW, height: iH } = container.querySelector('.info').getBoundingClientRect()
-      const iGap = (vW - iW) / 2
-      const mbxs = Array.from(document.querySelectorAll('.mint-box'), el => el.getBoundingClientRect())
-      const mbHs = mbxs.map(rect => rect.height + radius * 2)
-      const mbWs = mbxs.map(rect => rect.width)
-      const mbW = mbWs[0]
-      const mbGap = (vW - mbW) / 2
-      const mbPad = mbGap - radius
-      const { height: catH } = container.querySelector('.wool-cat-two').getBoundingClientRect()
-      const short_gap = mbPad < 1.8 * radius
+    // 取得Navbar元素
+    const navbar = document.getElementById('navbar');
 
-      function sign(x) { return x === 0 ? 0 : x > 0 ? 1 : -1; }
-      function genLine(x, y, dx, dy, { hasArrow = false, sFirst = false, sLast = false } = {}) {
-        sFirst &= short_gap
-        sLast &= short_gap
-        const xs = dx.reduce((pv, cv) => pv.concat(pv[pv.length - 1] + cv), [x])
-        const ys = dy.reduce((pv, cv) => pv.concat(pv[pv.length - 1] + cv), [y])
-        let arrow = '', arrow_style = ''
-        const rd = radius * 2
-        if (hasArrow) {
-          const k = .4
-          let crd = rd
-          if (sFirst) crd = short_radius * 3
-          if (dx[0] && !dy[0]) {
-            const s = sign(dx[0])
-            x += s * stroke / 2
-            arrow += `M${x},${y} L${x + crd * k * s},${y - crd * k} `
-            arrow += `M${x},${y} L${x + crd * k * s},${y + crd * k} `
-            x += s * stroke / 2
-          } else {
-            const s = sign(dy[0])
-            y += s * stroke / 2
-            arrow += `M${x},${y} L${x - crd * k},${y + crd * k * s} `
-            arrow += `M${x},${y} L${x + crd * k},${y + crd * k * s} `
-            y += s * stroke / 2
-          }
-        }
-        let line = ''
-        line += `M${x},${y} `
-        for (let i = 0, sz = dx.length; i < sz; i++) {
-          let cx = 0, cy = 0
-          let crd = rd
-          if (sFirst && (i == 0) || sLast && (i + 2 == sz)) crd = short_radius
-          const isLast = i + 1 == sz
-          if (!isLast) {
-            if (dx[i]) cx = crd * sign(dx[i])
-            if (dy[i]) cy = crd * sign(dy[i])
-          }
-          line += `L${xs[i + 1] - cx},${ys[i + 1] - cy} `
-          if (!isLast) {
-            let nx = cx + crd * sign(dx[i + 1])
-            let ny = cy + crd * sign(dy[i + 1])
-            line += `q${cx},${cy} ${nx},${ny}`
-          }
-        }
-        return { line, arrow, arrow_style }
-      }
-      function genBlock(u, y, h) {
-        const rd = short_gap ? short_radius : radius
-        const blockPad = mbPad - rd
-        const x = u > 0 ? 0 : vW
-        y += rd
-        const dx = [blockPad * u, 0, -blockPad * u]
-        const dy = [0, h - rd * 2, 0]
-        const xs = dx.reduce((pv, cv) => pv.concat(pv[pv.length - 1] + cv), [x])
-        const ys = dy.reduce((pv, cv) => pv.concat(pv[pv.length - 1] + cv), [y])
-        let arrow = '', arrow_style = ''
-        let line = ''
-        line += `M${x},${y} `
-        for (let i = 0, sz = dx.length; i < sz; i++) {
-          let cx = 0, cy = 0
-          const isLast = i + 1 == sz
-          if (!isLast) {
-            if (dx[i]) cx = rd * sign(dx[i])
-            if (dy[i]) cy = rd * sign(dy[i])
-          }
-          line += `L${xs[i + 1] - cx},${ys[i + 1] - cy} `
-          if (!isLast) {
-            let nx = cx + rd * sign(dx[i + 1])
-            let ny = cy + rd * sign(dy[i + 1])
-            line += `q${cx},${cy} ${nx},${ny}`
-          }
-        }
-        return { line, arrow, arrow_style }
-      }
+    // 監聽視窗的滾動事件
+    window.addEventListener('scroll', function () {
+      // 取得視窗的滾動位置
+      const scrollTop = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
 
-      const p = [.5, .3, .8, .6, .7, .8]
-      const of = short_gap ? short_radius * .8 : 0
-
-      function genPath1() {
-        const x = bGap
-        const y = bH
-        const dx = [bW + radius, 0, -radius - bGap - bW + mbPad + of, 0, -mbPad - of]
-        const dy = [0, iH, 0, mbHs[0] * p[0] + of, 0]
-        return genLine(x, y, dx, dy, { hasArrow: true, sLast: true })
+      // 判斷滾動位置是否超過某個門檻值，例如100px
+      if (scrollTop > 50) {
+        // 若超過門檻值，則加入 scrolled CSS class
+        navbar.classList.add('scrolled');
+      } else {
+        // 否則移除 scrolled CSS class
+        navbar.classList.remove('scrolled');
       }
+    });
+  }
+};
 
-      function genPath2() {
-        const x = mbPad
-        const y = bH + iH + mbHs[0] + mbHs[1] * p[1]
-        const dx = [0, mbW + radius * 2 - of, 0, mbPad + of]
-        const dy = [-mbHs[1] * p[1], 0, -mbHs[0] + radius / 2 - of, 0]
-        return genLine(x, y, dx, dy, { hasArrow: true, sLast: true })
-      }
+</script>
+<style>
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
 
-      function genPath3() {
-        const x = 0
-        const y = bH + iH + mbHs[0] + mbHs[1] + mbHs[2] * p[2] + of
-        const dx = [mbPad + of, 0, mbW + radius * 2 - of * 2, 0, mbPad + of]
-        const dy = [0, -mbHs[2] * p[2] - of, 0, mbHs[2] * p[3] + of, 0]
-        return genLine(x, y, dx, dy, { hasArrow: true, sFirst: true, sLast: true })
-      }
+*,
+:after,
+:before {
+  background-repeat: no-repeat;
+}
 
-      function genPath4() {
-        const x = vW
-        const y = bH + iH + mbHs[0] + mbHs[1] + mbHs[2] + catH + mbHs[3] + of
-        const dx = [-mbPad - of, 0, mbPad + of]
-        const dy = [0, -(radius * 2 + mbHs[3]) - of * 2, 0]
-        return genLine(x, y, dx, dy, { hasArrow: true, sFirst: true, sLast: true })
-      }
+body {
+  overflow-x: hidden;
+  background-color: #333;
+}
 
-      function genItem1() {
-        const u = 1
-        const y = bH + iH
-        const h = mbHs[0] * p[0]
-        return genBlock(u, y, h)
-      }
+head {
+  display: none;
+}
 
-      function genItem2() {
-        const u = -1
-        const y = bH + iH + radius / 2
-        const h = mbHs[0] * p[5]
-        return genBlock(u, y, h)
-      }
+.fade-in {
+  opacity: 0;
+  animation-name: fade-in;
+  animation-duration: 1s;
+  animation-timing-function: ease-in;
+  animation-fill-mode: forwards;
+}
 
-      function genItem3() {
-        const u = 1
-        const y = bH + iH + mbHs[0] + mbHs[1] * (p[1] + 0.35)
-        const h = mbHs[1] * (1 - p[1] - 0.35) + mbHs[2] * p[2]
-        return genBlock(u, y, h)
-      }
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
 
-      function genItem4() {
-        const u = -1
-        const y = bH + iH + mbHs[0] + mbHs[1] * p[4]
-        const h = mbHs[1] * (1 - p[4]) + mbHs[2] * p[3]
-        return genBlock(u, y, h)
-      }
-
-      function genItem5() {
-        const u = -1
-        const y = bH + iH + mbHs[0] + mbHs[1] + mbHs[2] + catH - radius * 2
-        const h = mbHs[3] + radius * 2
-        return genBlock(u, y, h)
-      }
-      const borderContainer = d3.select(container)
-      // clrar existing svg border
-      borderContainer.selectAll("svg.border").remove()
-      // draw
-      const svg = borderContainer.append('svg')
-      const height = ctH + mbHs[4]
-      svg.attr('width', `${vW}px`)
-      svg.attr('height', `${height}px`)
-      svg.attr('viewBox', `0 0 ${vW} ${height}`)
-      svg.attr('class', 'border')
-
-      const paths = [
-        genPath1(),
-        genPath2(),
-        genPath3(),
-        genPath4(),
-      ]
-      for (const { line, arrow, arrow_style } of paths) {
-        svg.append("path").attr("d", line).attr("stroke-width", stroke).attr("stroke", "#A89B85")
-        if (arrow) svg.append("path").attr("d", arrow).attr("stroke-width", stroke).attr("stroke", "#A89B85").attr("style", arrow_style)
-      }
-      const items = [
-        genItem1(),
-        genItem2(),
-        genItem3(),
-        genItem4(),
-        genItem5(),
-      ]
-      for (const { line } of items) {
-        svg.append("path").attr("d", line).attr("fill", "#82D357")
-      }
-
-      const leftWool = container.querySelector('.border-item.left.wool')
-      leftWool.style.top = `${bH + iH + mbHs[0] + mbHs[1] * (p[1] + 0.05)}px`
-      leftWool.style.width = `${mbGap}px`
-      leftWool.style.display = null
-      const rightCat = container.querySelector('.border-item.right.cat')
-      rightCat.style.top = `${bH + iH + mbHs[0] + mbHs[1] * .5}px`
-      rightCat.style.right = `${-mbGap}px`
-      rightCat.style.width = `${mbGap}px`
-      rightCat.style.display = null
-    }
+  to {
+    opacity: 1;
   }
 }
-</script>
-<style lang="sass">
-.mint-box.sponsors-items.is-index
-  --border-radius: 32px
-  @media screen and (max-width: 768px)
-    --border-radius: 16px
-  width: min(1280px, calc(100vw - var(--border-radius)*4))
-  margin-left: auto
-  margin-right: auto
-</style>
-<style lang="sass" scoped>
-h1, h2, h3, h4, h5, h6
-  margin: 0
-.border-container
-  position: relative
-  width: min(1280px, calc(100vw - var(--border-radius)*4))
-  --background-gap: calc((100vw - min(1280px, calc(100vw - var(--border-radius)*4)))/2)
-  --border-radius: 32px
-  @media screen and (max-width: 768px)
-    --border-radius: 16px
-  .border-item
-    position: absolute
-    max-width: calc(var(--border-radius)*4)
-    &.left.wool
-      transform: translateX(-100%) scale(0.8)
-    &.right.cat
-      transform: scaleX(-1) rotate(90deg) scale(2) translateY(30%)
-  &:deep(svg.border)
-    max-width: unset
-    position: absolute
-    top: 0
-    left: calc(-1*var(--background-gap))
-    pointer-events: none
-    stroke-linecap: round
-    fill: none
-@media screen and (min-width: 769px)
-  .pad1
-    padding: 0 40px
-  .pad2
-    padding: 0 80px
-  .pad3
-    padding-left: 24px
-.pad4
-  padding-left: 1em
-.cat-in-a-maze
-  @media screen and (max-width: 768px)
-    max-width: 80%
-.rat-center
-  color: #FFA949
-  text-align: center
-  @media screen and (max-width: 768px)
-    line-height: 5
-  @media screen and (min-width: 769px)
-    font-size: 32px
-.btns
-  display: flex
-  gap: 16px
-  @media screen and (max-width: 768px)
-    gap: 8px
-.name
-  text-align: right
-.banner
-  width: 95%
-  margin: 0 auto
-  display: grid
-  grid-template-columns: 5fr 0 4fr
-  grid-template-rows: 1fr 0 auto 50px auto
-  @media screen and (max-width: 768px)
-    grid-template-columns: 50% auto 45%
-    grid-template-rows: 1fr 3fr 0 1fr 2fr
-  grid-template-areas: ". . name" "x . name" "x . ." "x cat cat" ". cat cat"
-  .name
-    grid-area: name
-    word-break: keep-all
-    font-size: 32px
-    @media screen and (max-width: 768px)
-      font-size: 20px
-      line-height: 1.5
-  .x
-    grid-area: x
-    align-items: flex-start
-    img
-      width: 100%
-  .wool-cat-one
-    grid-area: cat
-    display: grid
-    grid-template-columns: auto auto
-    grid-gap: 16px
-    align-items: end
-    justify-content: flex-start
-    @media screen and (max-width: 768px)
-      grid-template-columns: 1fr 3fr
-      grid-gap: 4px
-    svg.cat
-      height: 100%
-      width: 100%
-      transform: translateY(5px)
-.info
-  margin-left: 5%
-  padding: var(--border-radius) 0
-  display: grid
-  grid-template-columns: 10fr 0.1fr 1fr 0.1fr 1fr 0.2fr auto 0.6fr
-  @media screen and (max-width: 768px)
-    grid-template-columns: 2fr 0.2fr 1fr 0.1fr 1fr 0.6fr auto 1.1fr
-  grid-template-areas: "text . arrow1 . arrow2 . btns ."
-  align-items: center
-  .text
-    line-height: 1.2
-    grid-area: text
-    word-break: keep-all
-    @media screen and (max-width: 768px)
-      font-weight: 700
-  .arrow
-    &:first-of-type
-      grid-area: arrow1
-    &:last-of-type
-      grid-area: arrow2
-  .btns
-    margin: 5% auto
-    grid-area: btns
-    @media screen and (max-width: 768px)
-      flex-direction: column
-    .btn
-      font-size: 30px
-      border-radius: 5em
-      @media screen and (max-width: 768px)
-        font-size: 20px
-  + .mint-box
-    margin-top: var(--border-radius)
-.mint-box
-  &.has-border
-    margin-bottom: calc(var(--border-radius)*2)
-  .btn
-    @media screen and (max-width: 768px)
-      font-size: 12px
-    &:hover
-      color: #383838
-.wool-cat-two
-  width: 80%
-  margin: 0 auto 0 auto
-  padding-top: 80px
-  display: grid
-  grid-template-columns: 5fr 1fr 5fr
-  grid-gap: 36px
-  @media screen and (max-width: 768px)
-    grid-gap: 8px
-  align-items: end
-  position: relative
-  bottom: -10px
-  .wool
-    margin-bottom: 35%
-</style>
+
+/* navbar */
+.navbarsection {
+  position: fixed;
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+  gap: 2.5%;
+  background-color: transparent;
+}
+
+.navbarsection.scrolled {
+  background-color: #333;
+}
+
+.navbar-item {
+  cursor: pointer;
+  color: #ffffff;
+}
+
+.logo {
+  margin: 0 2.5% 0 2.5%;
+  cursor: pointer;
+}
+
+.navbarbtnred {
+  color: #ea4335;
+  transition: 0.5s;
+  letter-spacing: 4px;
+  cursor: pointer;
+}
+
+.navbarbtnred:hover {
+  background-color: #ea4335;
+  box-shadow: 0 0 5px #ea4335,
+    0 0 25px #ea4335,
+    0 0 50px #ea4335,
+    0 0 60px #ea4335;
+}
+
+.navbarbtnblue {
+  color: #4285F4;
+  transition: 0.5s;
+  letter-spacing: 4px;
+  cursor: pointer;
+}
+
+.navbarbtnblue:hover {
+  background-color: #4285F4;
+  box-shadow: 0 0 5px #4285F4,
+    0 0 25px #4285F4,
+    0 0 50px #4285F4,
+    0 0 60px #4285F4;
+}
+
+.navbarbtngreen {
+  color: #77B55A;
+  transition: 0.5s;
+  letter-spacing: 4px;
+  cursor: pointer;
+}
+
+.navbarbtngreen:hover {
+  background-color: #77B55A;
+  box-shadow: 0 0 5px #77B55A,
+    0 0 25px #77B55A,
+    0 0 50px #77B55A,
+    0 0 60px #77B55A;
+}
+
+.navbarbtnyellow {
+  color: #FBBC04;
+  transition: 0.5s;
+  letter-spacing: 4px;
+  cursor: pointer;
+}
+
+.navbarbtnyellow:hover {
+  background-color: #FBBC04;
+  box-shadow: 0 0 5px #FBBC04,
+    0 0 25px #FBBC04,
+    0 0 50px #FBBC04,
+    0 0 60px #FBBC04;
+}
+
+/* container */
+
+#indexContainer {
+  background: url(/2023/imgs/2023/bg.svg) no-repeat;
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+}
+
+#introContainer {
+  padding-top: 15vh;
+  height: 100%;
+}
+
+#promoteContainer {
+  padding-top: 15vh;
+  height: 100%;
+}
+
+#agendaContainer {
+  padding-top: 15vh;
+  height: 100%;
+}
+
+#admittanceContainer {
+  padding-top: 15vh;
+  height: 100%;
+}
+
+#footerContainer {
+  padding-top: 15vh;
+  background-color: #333333;
+  height: 100%;
+}
+
+/* btn */
+.btnyellow {
+  margin: 1%;
+  color: #FBBC04;
+  transition: 0.5s;
+  letter-spacing: 4px;
+  cursor: pointer;
+}
+
+.btnyellow:hover {
+  background-color: #FBBC04;
+  box-shadow: 0 0 5px #FBBC04,
+    0 0 25px #FBBC04,
+    0 0 50px #FBBC04,
+    0 0 60px #FBBC04;
+}
+
+/* section */
+#first-section {
+  padding: 3vw;
+}
+
+.mainlogo {
+  height: 40vh;
+}
+
+.mainlogo img {
+  margin-top: 3%;
+  height: 100%;
+  width: 100%;
+}
+
+#first-section-title {
+  color: #ffffff;
+  font-size: 6.7vw;
+}
+
+.datefont {
+  color: #999;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 900;
+  font-size: 1.5vw;
+}
+
+.downicon {
+  cursor: pointer;
+  animation: jump 2s;
+  animation-iteration-count: infinite;
+}
+
+.sectionbox {
+  box-sizing: border-box;
+  width: 75%;
+  border: 5px solid #ffffff;
+}
+
+.sectionboxcenter {
+  box-sizing: border-box;
+  width: 90%;
+  border: 5px solid #ffffff;
+}
+
+#introsection {
+  box-shadow: 0px 0px 15px 5px #ea4335, 0px 0px 15px 5px #ea4335 inset;
+  border-radius: 0px 15px 15px 0px;
+}
+
+#promotesection {
+  box-shadow: 0px 0px 15px 5px #4285F4, 0px 0px 15px 5px #4285F4 inset;
+  border-radius: 15px 0px 0px 15px;
+}
+
+#agendasection {
+  box-shadow: 0px 0px 15px 5px #4285F4, 0px 0px 15px 5px #4285F4 inset;
+  border-radius: 15px;
+}
+
+#admittancesection {
+  box-shadow: 0px 0px 15px 5px #77B55A, 0px 0px 15px 5px #77B55A inset;
+  border-radius: 15px;
+}
+
+#footersection {
+  box-shadow: 0px 0px 15px 5px #FBBC04, 0px 0px 15px 5px #FBBC04 inset;
+  border-radius: 15px;
+}
+
+.introsectiontitle {
+  display: flex;
+  margin: 1%;
+  height: fit-content;
+}
+
+.introsectiontitlecontect {
+  color: #ffffff;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 900;
+  height: 5vw;
+  position: relative;
+  font-size: 2vw;
+}
+
+.introsectiontitle-bggreen {
+  position: absolute;
+  opacity: 0.7;
+  width: 100%;
+  height: 2vw;
+  background: url(/2023/imgs/2023/titlebggreen.svg) no-repeat;
+  background-size: cover;
+  background-position: center;
+  bottom: 20%;
+  left: 5%;
+  z-index: -1;
+}
+
+.introsectiontitle-bgyellow {
+  position: absolute;
+  opacity: 0.7;
+  width: 100%;
+  height: 2vw;
+  background: url(/2023/imgs/2023/titlebgyellow.svg) no-repeat;
+  background-size: cover;
+  background-position: center;
+  bottom: 20%;
+  left: 5%;
+  z-index: -1;
+}
+
+.introsectiontitle-bgblue {
+  position: absolute;
+  opacity: 0.7;
+  width: 100%;
+  height: 2vw;
+  background: url(/2023/imgs/2023/titlebgblue.svg) no-repeat;
+  background-size: cover;
+  background-position: center;
+  bottom: 20%;
+  left: 5%;
+  z-index: -1;
+}
+
+.introsectiontitle-bgred {
+  position: absolute;
+  opacity: 0.7;
+  width: 100%;
+  height: 2vw;
+  background: url(/2023/imgs/2023/titlebgred.svg) no-repeat;
+  background-size: cover;
+  background-position: center;
+  bottom: 20%;
+  left: 5%;
+  z-index: -1;
+}
+
+.footercontect {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  text-align: center;
+}
+
+.footersectioncontecttext {
+  color: #ffffff;
+  font-family: "Open Sans", sans-serif;
+  width: 40vw;
+  font-weight: 900;
+  margin: 2vw 0vw 0vw 4vw;
+}
+
+.introsectioncontect {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.introsectioncontecttext {
+  color: #ffffff;
+  font-family: "Open Sans", sans-serif;
+  width: 40vw;
+  font-weight: 900;
+  margin: 0vw 0vw 3vw 4vw;
+}
+
+.introsectioncontectmap {
+  width: 35vw;
+  margin-right: 5vw;
+}
+
+.introsectioncontectimg {
+  width: 300px;
+  margin: 0vw 5vw 5vw 0vw;
+}
+
+.introsectioncontectimg img {
+  width: 100%;
+  height: 100%;
+}
+
+.sword {
+  margin-left: 1vw;
+  width: 3vw;
+  height: 3vw;
+}
+
+.sword img {
+  width: 100%;
+  height: 100%;
+  transform: rotate(30deg);
+}
+
+/* flex */
+.fl {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.fr {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.fc {
+  display: flex;
+  justify-content: center;
+}
+
+.btnicon {
+  border-radius: 0.5rem;
+  color: #ffffff;
+  text-decoration: none;
+  margin: 5%;
+  padding: 5px;
+  font-size: 1.2vw;
+  transition: 0.3s;
+}
+
+.btnicon:hover {
+  background-color: rgba(105, 105, 105, 0.3);
+}
+
+/* agenda */
+.agenda-time {
+  width: 90%;
+  margin: auto;
+  flex-direction: row;
+  flex-wrap: wrap;
+  display: flex;
+  color: #FFF;
+}
+
+.agenda-time-item-head {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #4285F4;
+  border-radius: 5px;
+  box-shadow: 0px 0px 15px 5px #4285F4, 0px 0px 15px 5px #4285F4 inset;
+  border: 3px #ffffff solid;
+  margin-bottom: 2vw;
+}
+
+.agenda-time-item {
+  width: 50%;
+  padding: 1vw;
+}
+
+.room {
+  width: 100%;
+  border-top: 3px #ffffff solid;
+  background-color: #333;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 8px;
+  border-radius: 0px 0px 5px 5px;
+}
+
+.agenda-card-item {
+  box-shadow: 0px 0px 15px 5px #4285F4, 0px 0px 15px 5px #4285F4 inset;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+  margin-bottom: 2vw;
+}
+
+.card-head {
+  background-color: #4285F4;
+  border-radius: 5px 5px 0px 0px;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+}
+
+.card-body {
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #333;
+  background-color: #ffffff;
+}
+
+.card-body-name {
+  color: #999;
+}
+
+.card-footer-content {
+  display: flex;
+  justify-content: center;
+  color: #4285F4;
+  background-color: #ffffff;
+  border-radius: 0px 0px 5px 5px;
+}
+
+@keyframes jump {
+  0% {
+    transform: translate(0%, 0%);
+  }
+
+  50% {
+    transform: translate(0%, 30%);
+  }
+
+  100% {
+    transform: translate(0%, 0%);
+  }
+}
+
+@media (max-width: 1262px) {
+  .fl {
+    justify-content: center;
+  }
+
+  .fr {
+    justify-content: center;
+  }
+
+  #introsection,
+  #promotesection {
+    width: 90%;
+    border-radius: 15px;
+  }
+}
+
+@media (max-width: 992px) {
+
+  #first-section {
+    padding: 5vw;
+  }
+
+  .sword {
+    width: 7vw;
+    height: 7vw;
+  }
+
+  #first-section-title {
+    font-size: 9vw;
+  }
+
+  .datefont {
+    font-size: 3.5vw;
+  }
+
+  .fl {
+    justify-content: center;
+  }
+
+  .fr {
+    justify-content: center;
+  }
+
+  .introsectiontitlecontect {
+    max-width: 100%;
+    font-size: 40px;
+  }
+
+  #introsection,
+  #promotesection {
+    width: 90%;
+    border-radius: 15px;
+  }
+
+  .introsectioncontecttext {
+    width: 100%;
+    margin: 0;
+    padding: 20% 5% 5% 5%;
+  }
+
+  .introsectioncontectmap {
+    width: 90%;
+    margin: 0;
+  }
+
+  .introsectioncontectimg {
+    justify-content: center;
+    margin-right: 0;
+  }
+
+  .introsectioncontect {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .introsectiontitle-bgred,
+  .introsectiontitle-bgblue,
+  .introsectiontitle-bggreen,
+  .introsectiontitle-bgyellow {
+    display: none;
+  }
+
+  .footersectioncontecttext {
+    width: 100%;
+  }
+
+  .btnicon {
+    font-size: 3vw;
+  }
+}
+
+@media (max-width: 640px) {
+  #first-section {
+    padding: 15vw;
+  }
+
+  .sword {
+    width: 10vw;
+    height: 10vw;
+  }
+
+  .introsectiontitlecontect {
+    font-size: 28px;
+  }
+
+  .introsectioncontecttext {
+    padding: 30% 5% 5% 5%;
+  }
+
+  .logo {
+    margin: 0;
+  }
+
+  .agenda-time-item {
+    width: 100%;
+  }
+  .agenda-card-item,.agenda-time-item-head{
+    margin-bottom: 5vw;
+
+  }
+}</style>
+

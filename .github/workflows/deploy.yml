@@ -1,40 +1,35 @@
- name: Deploy to GitHub Pages
+name: Deploy to GitHub Pages
 
- on:
-   push:
-     branches: master
-   workflow_dispatch:
+on:
+  push:
+    branches: master
+  workflow_dispatch:
 
- jobs:
-   deploy:
-     runs-on: ubuntu-latest
-     steps:
-     - uses: actions/checkout@v3
-     - name: Set timezone to Asia/Taipei
-       uses: szenius/set-timezone@v1.0
-       with:
-         timezoneLinux: "Asia/Taipei"
-         timezoneMacos: "Asia/Taipei"
-     - name: Generate Schedule Json
-       uses: CCIP-App/schedule-json-generator-action@v1
-       id: generate
-       with:
-         gcp-api-key: ${{ secrets.GCP_API_KEY }}
-         spreadsheet-key: "198dUX5oH72Q7gaGt_SEPrON-QYNRdAu3f-F2Pg4uFoM"
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v3
+    - name: Set timezone to Asia/Taipei
+      uses: szenius/set-timezone@v1.0
+      with:
+        timezoneLinux: "Asia/Taipei"
+        timezoneMacos: "Asia/Taipei"
 
-     - uses: actions/setup-node@v3
-       with:
-         node-version: 16
-         cache: 'npm'
-     - name: Install npm packages
-       run: yarn install
+    - uses: actions/setup-node@v3
+      with:
+        node-version: 18
+        cache: 'yarn'
+    - name: Install yarn packages
+      run: yarn install
 
-     - name: Generate Pages
-       run: yarn build
+    - name: Generate Pages
+      run: yarn build
 
-     - name: Deploy to GitHub Pages
-       uses: peaceiris/actions-gh-pages@v3
-       with:
-         github_token: ${{ secrets.GITHUB_TOKEN }}
-         publish_dir: dist
-         force_orphan: true
+
+    - name: Deploy to GitHub Pages
+      uses: peaceiris/actions-gh-pages@v3
+      with:
+        github_token: ${{ secrets.ACCESS_TOEKN }}
+        publish_dir: dist
+        force_orphan: true
