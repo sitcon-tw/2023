@@ -2,7 +2,8 @@
   <div class="navbarsection" id="navbar">
 
     <div class="navbar-item"><a href="#introContainer" class="btn navbarbtnred">關於我們</a></div>
-    <div class="navbar-item"><a href="#promoteContainer" class="btn navbarbtnblue">稿件招募</a></div>
+<!--    <div class="navbar-item"><a href="#promoteContainer" class="btn navbarbtnblue">稿件招募</a></div>-->
+    <div class="navbar-item"><a href="#agendaContainer" class="btn navbarbtnblue">活動議程</a></div>
     <div class="logo">
       <a href="#indexContainer"><img :src="'/2023/imgs/2023/SITCON&GDSC_logo.svg'" alt /></a>
     </div>
