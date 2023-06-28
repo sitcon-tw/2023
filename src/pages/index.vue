@@ -862,7 +862,6 @@ head {
   padding-top: 8px;
   border-radius: 0px 0px 5px 5px;
 }
-
 .agenda-card-item {
   box-shadow: 0px 0px 15px 5px #4285F4, 0px 0px 15px 5px #4285F4 inset;
   border-radius: 5px;
@@ -870,6 +869,8 @@ head {
   flex-direction: column;
   cursor: pointer;
   margin-bottom: 2vw;
+  height: 220px;
+  justify-content: center;
 }
 
 .card-head {
@@ -899,6 +900,7 @@ head {
   color: #4285F4;
   background-color: #ffffff;
   border-radius: 0px 0px 5px 5px;
+  border: 0px;
 }
 
 @keyframes jump {
