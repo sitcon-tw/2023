@@ -2,7 +2,8 @@
   <div class="navbarsection" id="navbar">
 
     <div class="navbar-item"><a href="#introContainer" class="btn navbarbtnred">關於我們</a></div>
-    <div class="navbar-item"><a href="#promoteContainer" class="btn navbarbtnblue">稿件招募</a></div>
+<!--    <div class="navbar-item"><a href="#promoteContainer" class="btn navbarbtnblue">稿件招募</a></div>-->
+    <div class="navbar-item"><a href="#agendaContainer" class="btn navbarbtnblue">活動議程</a></div>
     <div class="logo">
       <a href="#indexContainer"><img :src="'/2023/imgs/2023/SITCON&GDSC_logo.svg'" alt /></a>
     </div>
@@ -861,7 +862,6 @@ head {
   padding-top: 8px;
   border-radius: 0px 0px 5px 5px;
 }
-
 .agenda-card-item {
   box-shadow: 0px 0px 15px 5px #4285F4, 0px 0px 15px 5px #4285F4 inset;
   border-radius: 5px;
@@ -869,6 +869,8 @@ head {
   flex-direction: column;
   cursor: pointer;
   margin-bottom: 2vw;
+  height: 220px;
+  justify-content: center;
 }
 
 .card-head {
@@ -898,6 +900,7 @@ head {
   color: #4285F4;
   background-color: #ffffff;
   border-radius: 0px 0px 5px 5px;
+  border: 0px;
 }
 
 @keyframes jump {
