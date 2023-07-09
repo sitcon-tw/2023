@@ -103,6 +103,9 @@
             <div class="introsectiontitle-bgblue"></div>
           </div>
         </div>
+        <div class="introsectioncontecttext">
+            <p>完整議程簡介及講者資訊請見 <a href="https://coscup.org/2023/zh-TW/session?room=TR+214">COSCUP 網站</a>，網站頁面右下角篩選按鈕「清除所有篩選條件」即可檢視完整 COSCUP 議程。</p>
+        </div>
         <div>
           <div class="agenda-time">
             <div class="agenda-time-item">
