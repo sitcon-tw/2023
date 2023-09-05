@@ -49,6 +49,7 @@
               <p>今年，SITCON 學生計算機年會與 Google Developer Student Clubs Taiwan & Hong Kong (GDSC) 合作，在 <a
                   href="https://coscup.org/2023/">COSCUP 2023</a> 主持「學生社群大亂鬥」的議程軌，讓學生們來到開源年度盛會分享與交流知識！</p>
               <p><a href="https://coscup.org/2023/">COSCUP 2023</a> 於 7/29, 30 在國立臺灣科技大學舉辦，不用報名直接到場參與即可，期待與您相見！</p>
+			  <p>想參與 SITCON 2024 的籌備嗎？你可以參考 <a href="https://sitcon.org/2022/staff">2022 籌備團隊</a>頁面了解各組分工，並加入<a href="https://groups.google.com/g/sitcon-general">郵件論壇</a>以接收籌備的第一手資訊！</p>
             </div>
             <div class="introsectioncontectimg">
               <img :src="'/2023/imgs/2023/SITCON&GDSC_logo.svg'">
